@@ -1,0 +1,345 @@
+LA LEGENDE DE ZAGOR, (écrit par Ian Livingstone) Série Défis Fantastiques 17
+			UN LIVRE DONT VOUS ETES LE HEROS
+
+Panneaux :
+-écran titre + choix des persos
+(-"Le dernier défi", avec le texte qui défile pour l'explication initiale) 
+OU projection directe dans l'aventure
+
+LIEUX et Décors
+---------------------------------------------------------------------
+1--Kerpierre, capitale royale du Chaudron, île la plus lointaine de l'archipel du cap des Glaces
+   Aussi un port
+#56 Aller aux marchés
+#154 Consulter un sage
+#206 gagner des pièces d'or
+	#256 Travailler sur les docks
+	#32  Jouer à la Taverne
+#220 Partir pour le Château d'Argent
+
+
+#####56 ----Marchés de Kerpierre
+1 Cottes de mailles, 7 PIO
+2 Arc et flèches, 4 PIO
+3 Arbalète et carreaux, 4 PIO
+4 Potion d'Endurance, 7 PIO
+5 Anneau Magique, 5 PIO
+6 Antidote contre la peste, 6 PIO
+7 Bouteille vide, 1 PIO
+8 Rouleau de corde (10m), 1 PIO
+9 Flacon de Liqueur d'Herbes, 3 PIO
+10 Potion de Résistance au Feu, 5 PIO 
+#154 Consulter un sage
+#206 gagner des pièces d'or
+	#256 Travailler sur les docks
+		#173
+	#32  Jouer à la Taverne
+		#173
+#220 Partir pour le Château d'Argent
+
+
+
+#####154
+Discussion avec Yondell (cf livre)
+#382 accepter de payer 5 Pièces d'or
+#56 Aller aux marchés
+#206 gagner des pièces d'or
+	#256 Travailler sur les docks
+	#32  Jouer à la Taverne
+#220 Partir pour le Château d'Argent
+
+
+
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+2--
+
+
+
+
+
+
+GRIMOIRE AMARILLIEN:
+0=Ravitaillement, coût = 1, 2, ou 3. Utilisable partout sauf combat
+	si 1, alors augmente provision de 1
+	si 2, alors augmente provision de 3
+	si 3, alors augmente provision de 5
+1=Saut, coût = 1. Utilisable face à un obstacle. sauf combat
+	(puits, couloir piégé, fosse de moins de 6m) 
+2=Lumière, coût = 1. Utilisable si lanterne inutilisable. sauf combat
+	Fonctionne une fois par Flag
+
+3=Chance, coût = 1. Utilisable partout sauf combat
+	augmente de 1 point la CHANCE
+4=Habileté, coût = 1. Utilisable juste avant combat ou juste avant tester Habileté
+	Augmente de 1 point l'HABILETE. Effet s'estompe dès fin du combat ou test.
+5=Main Vive, coût = 2. Utilisable juste avant combat, pas pendant.
+	Pour les 3 premiers Assauts, permet de lancer 2 dés et garder le meilleur
+	résultat.
+6=Boule de Feu, coût = 2. Utilisable pendant combat.
+	Sert en Assaut à la place d'une arme. Si FdA sup alors blesse de 5 HP
+	Si FdA inf, rate la cible
+7=Ecran Magique, coût = 2. Utilisable partout sauf combat
+	Protège d'un seul sortilège adverse.
+8=Mort, coût = 3. Utilisable pendant combat.
+	Si HABILETE adverse <=9 et FdA sup, ennemi péri sur-le-champ
+	Sinon sans effet.
+	N'affecte pas les Morts Vivants et Zagor.
+9=Foudre, coût = 3. Utilisable pendant combat.
+	Sert en Assaut à la place d'une arme. Si FdA sup alors blesse de 7 HP
+	Si FdA inf, rate la cible
+10=Téléportation, coût = 4. Utilisable près d'un portail magique.
+	Permet de rejoindre certains lieus indiquées. 
+11=Appropriation de trésor, coût = 5. Utilisable partout sauf combat.
+	Permet d'obtenit (au choix) un Talisman d'Or ou Dague d'Argent.
+	Mais ces objets ne procureront pas de points de CHANCE obtenus ainsi.
+	Utilisable que 2 fois pour toute l'aventure.
+
+
+INVENTAIRE de l'EQUIPEMENT:
+0 légère cuirasse en peau
+1 lanterne
+2 petit couteau (sert si on pert toutes ses armes. Fait perdre 1 HP seulement)
+3 épée
+4 hache de combat
+5 matraque en bois
+
+6 Cotte de mailles
+7 Arc et flèches
+8 Arbalète et carreaux
+9 Potion d'Endurance (redonne la moitié des points d'HP de départ, arrondis au sup)
+10 Anneau Magique (donne 1 point de Magie)
+11 Antidote contre la peste (guérit un type de peste à la fois, si guérit=récupère tout les HP perdus par la peste)
+12 Bouteille vide
+13 Rouleau de corde (10m)
+14 Flacon de Liqueur d'Herbes (donne 4 HP) peut boire partout, sauf en combat
+15 Potion de Résistance au Feu (divise par 2 les HP perdu par une attaque de feu, arrondi au sup)
+16 Pied de biche en acier (utilisable 1 fois avant un test Habileté de porte ou serrure)
+17
+
+
+ARMES:
+0 petit couteau
+1 épée
+2 hache de combat
+3 matraque en bois
+4 Arc et flèches
+5 Arbalète et carreaux
+
+ARMURES:
+0 légère cuirasse en peau
+1 Cotte de mailles
+2 Armure métallique
+
+OBJETS:
+0 Lanterne
+1 Potion d'Endurance
+2 Anneau Magique
+3 Antidote contre la peste
+4 Bouteille vide
+5 Rouleau de corde (10m)
+6 Flacon de Liqueur d'Herbes
+7 Potion de Résistance au Feu
+8 Pied de biche en acier
+
+
+TRESORS: (sert à être vendu)
+0 Tapisserie en soie (trouvée chez l'Elfe Noir en Flag=43 après victoire;est estimée à 4PO)
+1 Bol en faïence (F49)
+
+
+
+EFFETS:
+0 Résistance au Feu
+1 Ecran Magique
+2 Main Vive
+3 Poison de la peste bubonique
+4 Poison de la peste 2
+5 Poison de la peste 3
+6 Poison de la peste 4
+7 Poison de la peste 5
+
+
+
+
+
+BESTIAIRE:
+1 VARAN DES BRUMES, Habileté:10		Endurance:16
+2 GRAND ORQUE, Habileté:7		Endurance:6
+3 ORQUE MUTANT, Habileté:8		Endurance:9
+4 GOBELIN,	Habileté:6		Endurance:6
+5 Elfe Noir,    Habileté:8		Endurance:10
+6 Horde de Rats,Habileté:7		Endurance:8 (si morsure, poison peste bubonique)
+7 HETERO-LEZARD,Habileté:7		Endurance:9
+
+
+COMBAT PERSO/ENNEMI ATTAQUE TYPE:
+1 = Attaque normale, 2 HP, 3 si malchance ou 1 en dégâts reçus, et 4 si chance ou 1
+2 = Boule de Feu, 4 HP (ennemi), 5 HP (Perso)
+3 = Foudre
+4 = Mort (Perso)
+
+
+//----------------------------##############################-----------------------------//
+GUIDE DES FLAGS:
+Kerpierre
+
+1, Port de Kerpierre
+*2=220="Aller au Château"
+*3=56="Aller aux marchés"
+*4=206="Chercher un gain d'argent" / Done
+	*6=256 Travailler sur les docks
+	*7=32 Jouer dans une taverne
+		8=173 quartiers louches, TenterChance
+*5=154="Consulter un sage du roi" / Done
+	*9=382 Accepter de payer 5 pieces d'or
+
+------------------------------------------------------------
+Sur la Gloire d'Amarillie
+*10=44
+*11=98
+------------------------------------------------------------
+Ile de la Tour
+
+*12=75
+*13=369 "Se diriger vers les ruines a l'ouest" / Done
+*14=331 "Se diriger vers les ruines a l'est" / Done
+	16=240 
+*15=192 "Aller directement au Chateau d'Argent"
+	17=103
+	18=6 
+*16=240 "Y jetez 1 Piece d'Or" / Done Flag14
+*17=103 "Utiliser un sortilege d'Ouverture"
+*18=6 "Essayer d'entrer de force", Tester Habilete puis Tenter Chance
+	Si Habilete échec, Endurance-2
+	Chance = 17=103
+	Malchance = 19=265 COMBAT
+
+------------------------------------------------------------
+Dans le Chateau d'Argent
+
+*17=103
+*20=20 "Porte de droite" Done, si Done=1, alors Flag=25
+	23=53 "Inspecter les lieux" (Prendre un Repas et Test d'Habilete)
+		succès, 24=132
+		  |
+		  V
+		échec 25=227
+	21=318
+	22=376
+*21=318 "Porte de gauche" Done
+	26=394 "Fouiller l'amas de materiel" / TesterHabilete / COMBAT
+		si succes, sort du filet
+		si échec, combat avec FdA-2
+		Apres COMBAT, TenterChance
+			si succes, obtient Arc et flèches
+			si échec, obtien rien
+	20=20
+	22=376
+*22=376 "Porte d'en face"
+	27=155 "Aller au bout du couloir nord"
+	28=3 "Prendre le couloir sud, puis ouest"
+	29=359 "Ouvrir la porte en face"
+	30=38 "Ouvrir la première porte à gauche, couloir nord"
+	31=347 "Ouvrir la deuxième porte à gauche, couloir nord"
+*23=53, dans F20,
+*24=132, après F23 si succès TestHab
+*25=227, après F23 si échec TestHab
+*26=394 , dans F21, "Fouiller l'amas de matériel"
+
+*27=155 "Aller au bout du couloir nord"
+	32=105
+	33=269
+28=3 "Prendre le couloir sud, puis ouest"
+
+
+
+
+
+
+*29=359 "Ouvrir la porte en face"
+	48=215 combattre horde de rats
+		49=61 fouiller la salle
+			50=162 1 point de magie pour contacter les morts
+			30=38 Aller vers les cuisines
+			22=376
+		22=376 
+	22=376 fuire
+*30=38 "Ouvrir la premiere porte a gauche"
+	51 "Lumière 1 Magie"
+	52 "Porte du mur ouest"
+		53=116 "Suivre la trace"
+			54=171 "Ouvrir la porte secrete" --> 37=171
+			22=376
+		22=376
+	22=376
+
+*31=347 "Ouvrir la deuxieme porte a gauche"
+	32=105, ouvrir la premiere porte
+		33=269
+		22=376
+	33=269
+
+*32=105 "Ouvrir la première porte" Done 
+33=269 "Ouvrir la deuxième porte" Done, Done par Done de 37=171
+	Question "Voulez-vous approfondir les recherches ?"
+	34=2, va à F35 Done
+	35=33 "Test Habileté de LOCALISATION" DoneOpen by 36
+		36=141, si succès
+			Question ="Souhaitez-vous ouvrir la porte ?"
+			37=171, si OUI
+***				38=386 Perso=Sallazar, lire les runes
+					41=23
+					39=339
+					40=110
+					22=376
+				39=339 "Pousser la porte"
+					42 si Sallazar
+						43 "Attaquer l'Elfe Noir"
+						44 "Prononcer son nom"
+							? si correct
+							43 si incorrect
+						45 "Tenter de négocier"
+							Tenter Chance
+								Chance = 47
+								Malchance=43 ou 46 et HP-4
+						46 "Prendre la fuite"
+				40=110 "Sort d'Ouverture"
+					22
+					39
+				22=376 "Rebrousser chemin"
+			22=376, si NON
+			
+		22=376, si échec
+*34=2 , dans F33, "OUI" Gain d'objet, Done
+*35=33 , dans F33, "NON / ou suite de OUI
+*36=141 dans F35, "Succès de HabLoc"
+*37=171 dans F36, "OUI"
+*38=386, dans F37, si SALLAZAR, capable de lire les runes magiques.
+39=339, dans F37, "Pousser la porte"
+*40=110, dans F37, "Lancer un sortilege d'Ouverture pour 1 point de Magie"
+*41=23, dans F38, succès TestHabiLoc
+*42=306 dans F39 si Sallazar
+*43=258 dans F39, "attaquer de suite l'Elfe Noir"
+44= ? dans F39 si on connaît le nom de l'Elfe Noir ( ( ******* ) )
+*45=289 dans F39 si connaît pas son nom mais tente de négocier quand même
+*46=198 dans F39, prendre la fuite face à l'Elfe Noir
+*47=231 dans F45 Tenter Chance réussie
+
+*48=215 dans F29, Combattre la horde de rats
+*49=61 dans F48, Fouiller la salle à manger
+*50=162 dans F49, 1 point de Magie pour contacter les morts
+*51=279 dans F30, sort Lumière dans cuisines
+*52=27, dans F30, passer le mur ouest
+*53=116 dans F52, suivre la trace
+
+*31=347 dans F22, ouvrir la deuxième porte à gauche, couloir nord
+
+
+
+
+
+
