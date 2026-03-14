@@ -1,0 +1,66 @@
+//*************Mob Giant Cube Time>5 Cube se déplace V1
+
+			if (MobGCcubeLocky>=MobGCy+280){
+				MobGCcubey+=3+2*MobGCangry;
+				if (MobGCcubex+48<X) MobGCcubex+=2;
+				else if (MobGCcubex+48>X) MobGCcubex-=2;
+				}
+			if (MobGCcubeLocky<=MobGCy+20){
+				//MobGCcubey-=3+2*MobGCangry;
+				MobGCcubey-=3+2*MobGCangry;
+				MobGCcubex+=3+2*MobGCangry;
+				if (MobGCcubey+40<Y) MobGCcubey+=2;
+				else if (MobGCcubey+40>Y) MobGCcubey-=2;
+				if (MobGCcubex+48<X) MobGCcubex+=2;
+				else if (MobGCcubex+48>X) MobGCcubex-=2;
+				}
+			if (MobGCy+20<MobGCcubeLocky && MobGCcubeLocky<MobGCy+280){
+				if (MobGCcubeLockx>MobGCx+300){
+					MobGCcubex+=3+2*MobGCangry;
+					if (MobGCcubey+40<Y) MobGCcubey+=2;
+					else if (MobGCcubey+40>Y) MobGCcubey-=2;
+					}
+				if (MobGCcubeLockx<MobGCx){
+					MobGCcubex-=3+2*MobGCangry;
+					if (MobGCcubey+40<Y) MobGCcubey+=2;
+					else if (MobGCcubey+40>Y) MobGCcubey-=2;
+					}
+				}
+
+// ********************Mob Giant Cube Time>5 Cube se déplace  V2
+
+			if (MobGCcubeLockx==400) MobGCcubeLockx+=1;
+			if (MobGCcubeLocky==416) MobGCcubeLocky+=1;
+			if (MobGCcubeLockx<MobGCcubex+48 && MobGCcubeLocky<MobGCcubey+40){
+				MobGCcubeLockx-=3+2*MobGCangry;
+				MobGCcubeLocky-=3+2*MobGCangry;
+				MobGCcubex-=3+2*MobGCangry;
+				MobGCcubey-=3+2*MobGCangry;
+				}
+			else if (MobGCcubeLockx>MobGCcubex+48 && MobGCcubeLocky<MobGCcubey+40){
+				MobGCcubeLockx+=3+2*MobGCangry;
+				MobGCcubeLocky-=3+2*MobGCangry;
+				MobGCcubex+=3+2*MobGCangry;
+				MobGCcubey-=3+2*MobGCangry;
+				}
+			else if (MobGCcubeLockx>MobGCcubex+48 && MobGCcubeLocky>MobGCcubey+40){
+				MobGCcubeLockx+=3+2*MobGCangry;
+				MobGCcubeLocky+=3+2*MobGCangry;
+				MobGCcubex+=3+2*MobGCangry;
+				MobGCcubey+=3+2*MobGCangry;
+				}
+			else if (MobGCcubeLockx<MobGCcubex+48 && MobGCcubeLocky>MobGCcubey+40){
+				MobGCcubeLockx-=3+2*MobGCangry;
+				MobGCcubeLocky+=3+2*MobGCangry;
+				MobGCcubex-=3+2*MobGCangry;
+				MobGCcubey+=3+2*MobGCangry;
+				}
+			int Y = (int)((MobGCcubeLocky-416)*(MobGCcubex+48-400)/(MobGCcubeLockx-400))+416;
+			int X = (int)((MobGCcubeLockx-400)*(MobGCcubey+40-416)/(MobGCcubeLocky-416))+400;
+			g.setColor(Color.gray);
+			g.fillRect(MobGCcubex, MobGCcubey, 96, 81);
+
+			if (MobGCcubex+48<X) MobGCcubex+=3+2*MobGCangry;
+			else if (MobGCcubex+48>X) MobGCcubex-=3+2*MobGCangry;
+			if (MobGCcubey+40<Y) MobGCcubey+=3+2*MobGCangry;
+			else if (MobGCcubey+40>Y) MobGCcubey-=3+2*MobGCangry;
