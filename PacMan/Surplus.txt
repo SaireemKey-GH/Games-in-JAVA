@@ -1,0 +1,171 @@
+-----------------------------Colision aux 4 coins
+		int lin1x[] = {0, this.getWidth()/5, this.getWidth()/5};
+		int lin1y[] = {this.getHeight()/5, this.getHeight()/5, 0};
+		int lin2x[] = {4*this.getWidth()/5, 4*this.getWidth()/5, this.getWidth()};
+		int lin2y[] = {0, this.getHeight()/5, this.getHeight()/5};
+		int lin3x[] = {0, this.getWidth()/5, this.getWidth()/5};
+		int lin3y[] = {4*this.getHeight()/5, 4*this.getHeight()/5, this.getHeight()};
+		int lin4x[] = {4*this.getWidth()/5, 4*this.getWidth()/5, this.getWidth()};
+		int lin4y[] = {this.getHeight(), 4*this.getHeight()/5, 4*this.getHeight()/5};
+
+-------------------------------------Colision()
+
+public boolean ColisionNord(){
+		int Cx=0;
+		int Cy=0;
+		for(int i=pacx; i<pacx+30; i++){
+			if (lin1x[0]<i && i<lin1x[1]){
+				Cx=1;
+				break;
+				}
+			}
+		if (pacy==lin1y[0]) Cy=1;
+			
+		for(int i=pacx; i<pacx+30; i++){
+			if (lin2x[1]<i && i<lin2x[2]){
+				Cx=1;
+				break;
+				}
+			}
+		return Cx==1 && Cy==1 && pacSens==1 || (pacy==0 && pacSens==1);
+		}
+	public boolean ColisionSud(){
+		int Cx=0;
+		int Cy=0;
+		for(int i=pacx; i<pacx+30; i++){
+			if (lin3x[0]<i && i<lin3x[1]){
+				Cx=1;
+				break;
+				}
+			}
+		if (pacy+30==lin3y[0]) Cy=1;
+			
+		for(int i=pacx; i<pacx+30; i++){
+			if (lin4x[1]<i && i<lin4x[2]){
+				Cx=1;
+				break;
+				}
+			}
+		return Cx==1 && Cy==1 && pacSens==3 || (pacy+30==this.getHeight() && pacSens==3);
+		}
+	public boolean ColisionEst(){
+		int Cx=0;
+		int Cy=0;
+		for(int i=pacy; i<pacy+30; i++){
+			if (lin2y[0]<i && i<lin2y[1]){
+				Cy=1;
+				break;
+				}
+			}
+		if (pacx+30==lin2x[0]) Cx=1;
+			
+		for(int i=pacy; i<pacy+30; i++){
+			if (lin4y[1]<i && i<lin4y[0]){
+				Cy=1;
+				break;
+				}
+			}
+		return Cx==1 && Cy==1 && pacSens==2 || (pacx+30==this.getWidth() && pacSens==2);
+		}
+	public boolean ColisionWest(){
+		int Cx=0;
+		int Cy=0;
+		for(int i=pacy; i<pacy+30; i++){
+			if (lin1y[2]<i && i<lin1y[1]){
+				Cy=1;
+				break;
+				}
+			}
+		if (pacx==lin1x[1]) Cx=1;
+			
+		for(int i=pacy; i<pacy+30; i++){
+			if (lin3y[1]<i && i<lin3y[2]){
+				Cy=1;
+				break;
+				}
+			}
+		return (Cx==1 && Cy==1 && pacSens==0) || (pacx==0 && pacSens==0);
+		}
+
+
+
+------------------------------------Colision Red Bords
+if (Redx+30>=this.getWidth() && RedSens==2){
+			while(RedSens==2) RedSens=0+(int)(Math.random()*4);
+			}
+		if (Redx<=0 && RedSens==0){
+			while(RedSens==0) RedSens=0+(int)(Math.random()*4);
+			}
+		if (Redy<=0 && RedSens==1){
+			while(RedSens==1) RedSens=0+(int)(Math.random()*4);
+			}
+		if (Redy+27>=this.getHeight() && RedSens==3){
+			while(RedSens==3) RedSens=0+(int)(Math.random()*4);
+			}
+
+
+-------------------------------------Methode BubbleEat V1
+public int[] BubbleEat(){
+		int Eat[] = new int[4];
+		for(int i=pacx+13; i<pacx+18; i++){
+			for(int j=0; j<15; j++){
+				if (i==Bubblex[j]){
+					Eat[0]=Bubblex[j];
+					Eat[2]=j;
+					break;
+					}
+				if (Eat[0]==Bubblex[j]) break;
+				}
+			}
+		for(int i=pacy+13; i<pacy+18; i++){
+			for(int j=0; j<15; j++){
+				if (i==Bubbley[j]){
+					Eat[1]=Bubbley[j];
+					Eat[3]=j;
+					break;
+					}
+				if (Eat[1]==Bubbley[j]) break;
+				}
+			}
+		return Eat;
+		}
+
+
+--------------------------------------Methode Aura FKPurple
+
+		for(int i=pacx+12; i<pacx+18; i++){
+			if (Purplex-33<i && i<Purplex){
+				Vx=0;
+				break;
+				}	
+			}
+		for(int i=pacx+12; i<pacx+18; i++){
+			if (Purplex<i && i<Purplex+33){
+				Vx=2;
+				break;
+				}	
+			}
+		for(int i=pacy+12; i<pacy+18; i++){
+			if (Purpley<i && i<Purpley+30){
+				Vy=20;
+				break;
+				}	
+			}
+		for(int i=pacx+12; i<pacx+18; i++){
+			if (Purplex-33<i && i<Purplex+66){
+				Vx=13;
+				break;
+				}	
+			}
+		for(int i=pacy+12; i<pacy+18; i++){
+			if (Purpley-30<i && i<Purpley-10){
+				Vy=1;
+				break;
+				}	
+			}
+		for(int i=pacy+12; i<pacy+18; i++){
+			if (Purpley+40<i && i<Purpley+60){
+				Vy=3;
+				break;
+				}	
+			}
