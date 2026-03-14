@@ -1,0 +1,59 @@
+				* 0 is red button accumulation (even for red button & odd for portal)
+				* 1 is blue button 1
+				* 2 is blue button 2
+				* 3 is red button 1
+				* 4 is red button 2
+				**ULC
+				* 5 is x addition on red block rolling
+				* 6 is x cos position for circle block & red
+				* 7 is y sin position for circle block & red
+				* 8 is its x cos addition 
+				* 9 is x difference on sustain
+			* * * * * 10 is their move variable
+				* 11 is x position of block moving
+				* 12 is its trigger
+				**ULC
+				* 13 is y position of block with red on sides on left
+				* 14 is its trigger
+				**LLC
+				* 15 is x position of first meet block moving
+				* 16 is its trigger
+				* 17 is x addition for second meet duo block
+				* 18 is their trigger
+				* 19
+				* 20 is trigger of red button in central CROSS
+				* 21 is x difference of trio block 2nd in LRC
+				* 22
+				* 23 is x cos position of fourth meet block half
+				* 24 is y sin  position of fourth meet block half
+				* 25 is its x difference on sustain 
+				* 26 is x cos position of 1st trio blocks & red
+				* 27 is y sin position of 1st trio blocks & red
+				* 28 is x difference of 1st trio block
+				* 29 is x difference of 2nd trio block
+				* 30 is x position of moving block on sustain next to blue button
+				* 31 is y position of moving block on sustain
+				**LLC 
+				**URC 
+				* 32 is y position of red block
+				* 33 is its trigger
+				* 34 is y position of block moving on sustain next to it
+				* 35 is x cos position of red blocks
+				* 36 is y sin position of red blocks
+				* 37 is x position of block moving on sustain
+				* 38 is x,y addition of rolling blocks/red
+				**URC 
+				* 39 is y addition of block & red
+				* 40 is their trigger
+				**LRC
+				* 41 is x position of first meet block moving
+				* 42 is its trigger
+				* 43 is x cos position of trio blocks/red
+				* 44 is y sin position of trio blocks/red
+				* 45 is x difference on sustain of trio blocks/red
+				* 46 is x addition of trio blocks/red
+				* 47 is its trigger
+				* 48 is x position of moving block on sustain next to blue button 2
+				* 49 is y position of moving block on sustain
+				**LRC
+				*/

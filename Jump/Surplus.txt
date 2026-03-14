@@ -1,0 +1,325 @@
+//****SUSPENSION LEVEL 27
+
+			if (WallStick(38, 100, 2, 700)) Sustained=WallStickedL=1;
+			else if (WallStick(860, 100, 2, 700)) Sustained=WallStickedR=1;
+			else if (Sustain(420, 50, 5, 2)) Sustained=1;
+			else if (WallStick(420, 50, 2, 750)) Sustained=WallStickedR=1;
+			else if (WallStick(423, 50, 2, 750)) Sustained=WallStickedL=1;
+			else if (Sustain(475, 50, 5, 2)) Sustained=1;
+			else if (WallStick(475, 50, 2, 750)) Sustained=WallStickedR=1;
+			else if (WallStick(478, 50, 2, 750)) Sustained=WallStickedL=1;
+			else if (Sustain(250, 500, 60, 2) && ButtonOn1==0) Sustained=1;
+			else if (Sustain(250, 500, 60, 2) && ButtonOn1==1) Sustained=1;
+			else if (Sustain(520, 600, 80, 2) && ButtonOn1==1) Sustained=1;
+			else if (Sustain(650, 500, 50, 2) && ButtonOn1==1) Sustained=1;
+			else if (Sustain(500, 500, 150, 2) && ButtonOn1==1) Sustained=1;
+			else if (Sustain(180, 50, 70, 2) && ButtonOn1==2) Sustained=1;
+			else if (WallStick(180, 50, 2, 40) && ButtonOn1==2) Sustained=WallStickedR=1;
+			else if (Sustain(150, 140+100*0, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(150, 140+100*1, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(150, 140+100*2, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(150, 140+100*3, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(150, 140+100*4, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(210, 200+100*0, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(210, 200+100*1, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(210, 200+100*2, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(210, 200+100*3, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(210, 200+100*4, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(500+40*0, 790-0*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*1, 790-1*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*2, 790-2*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*3, 790-3*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*4, 790-4*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*5, 790-5*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*6, 790-6*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*7, 790-7*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(500+40*8, 790-8*60, 40, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(200, P1y, 50, 2) && ButtonOn1==4){
+				Sustained=1;
+				if (P1Tour==0) y+=1;
+				if (P1Tour==1) y-=1;
+				}
+			else if (Sustain(550+0*80, 100, 30, 2) && ButtonOn1==5) Sustained=1;
+			else if (Sustain(550+1*80, 100, 30, 2) && ButtonOn1==5) Sustained=1;
+			else if (Sustain(550+2*80, 100, 30, 2) && ButtonOn1==5) Sustained=1;
+			else if (Sustain(550+3*80, 100, 30, 2) && ButtonOn1==5) Sustained=1;
+			else if (Sustain(180, P1y, 20, 2) && ButtonOn1==6){
+				Sustained=1;
+				if (P1Tour==0) y+=1;
+				if (P1Tour==1) y-=1;
+				}
+			else if (WallStick(180, P1y, 2, 70) && ButtonOn1==6){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) y+=1;
+				if (P1Tour==1) y-=1;
+				}
+			else if (WallStick(198, P1y, 2, 70) && ButtonOn1==6){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) y+=1;
+				if (P1Tour==1) y-=1;
+				}
+			else if (Sustain(300, 650-P1y, 20, 2) && ButtonOn1==6){
+				Sustained=1;
+				if (P1Tour==0) y-=1;
+				if (P1Tour==1) y+=1;
+				}
+			else if (WallStick(300, 650-P1y, 2, 70) && ButtonOn1==6){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) y-=1;
+				if (P1Tour==1) y+=1;
+				}
+			else if (WallStick(318, 650-P1y, 2, 70) && ButtonOn1==6){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) y-=1;
+				if (P1Tour==1) y+=1;
+				}
+			else if (Sustain(370, 25, 140, 2) && ButtonOn1==6) Sustained=1;
+			else if (Sustain(530, 740, 280, 2) && ButtonOn1==6) Sustained=1;
+			else if (WallStick(98, 680, 2, 80) && ButtonOn1==6) Sustained=WallStickedL=1;
+			else if (WallStick(370, 600, 2, 80) && ButtonOn1==6) Sustained=WallStickedR=1;
+			else if (WallStick(98, 520, 2, 80) && ButtonOn1==6) Sustained=WallStickedL=1;
+			else if (WallStick(370, 440, 2, 80) && ButtonOn1==6) Sustained=WallStickedR=1;
+			else if (WallStick(98, 360, 2, 80) && ButtonOn1==6) Sustained=WallStickedL=1;
+			else if (WallStick(370, 280, 2, 80) && ButtonOn1==6) Sustained=WallStickedR=1;
+			else if (WallStick(98, 200, 2, 80) && ButtonOn1==6) Sustained=WallStickedL=1;
+			else if (WallStick(370, 120, 2, 80) && ButtonOn1==6) Sustained=WallStickedR=1;
+			else if (WallStick(98, 40, 2, 80) && ButtonOn1==6) Sustained=WallStickedL=1;
+
+			else if (Sustain(425, 50+0*100, 50, 2) && ButtonOn1==0) Sustained=1;
+			else if (Sustain(425, 50+1*100, 50, 2) && ButtonOn1==1) Sustained=1;
+			else if (Sustain(425, 50+2*100, 50, 2) && ButtonOn1==2) Sustained=1;
+			else if (Sustain(425, 50+3*100, 50, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(425, 50+4*100, 50, 2) && ButtonOn1==4) Sustained=1;
+			else if (Sustain(425, 50+5*100, 50, 2) && ButtonOn1==5) Sustained=1;
+			else if (Sustain(425, 50+6*100, 50, 2) && ButtonOn1==6) Sustained=1;
+			else if (Sustain(425, 780, 50, 2)) Sustained=1;
+			else Sustained=WallStickedL=WallStickedR=0;
+
+
+
+//****SUSPENSION LEVEL 26
+			if (Sustain(550, 70, 250, 2)){
+				Sustained=1;
+				if (ButtonOn1==2) ButtonOn1=3;
+				if (ButtonOn1==5) ButtonOn1=P1Tour=6;
+				}
+			else if (Sustain(800, 70, 50, 2) && ButtonOn1==3) Sustained=1;
+			else if (Sustain(800, 70, 50, 2) && ButtonOn1==6) Sustained=1;
+			else if (Sustain(120, 780, 20, 2)) Sustained=1;
+			else if (Sustain(160, 750, 20, 2)) Sustained=1;
+			else if (WallStick(160, 750, 2, 40)) Sustained=WallStickedR=1;
+			else if (WallStick(178, 750, 2, 40)) Sustained=WallStickedL=1;	
+			else if (Sustain(240, 700, 20, 2)) Sustained=1;
+			else if (WallStick(240, 700, 2, 30)) Sustained=WallStickedR=1;
+			else if (WallStick(258, 700, 2, 30)) Sustained=WallStickedL=1;
+			else if (Sustain(320, 770, 15, 2)) Sustained=1;
+			else if (WallStick(400, 660, 2, 40)) Sustained=WallStickedR=1;
+			else if (WallStick(408, 660, 2, 40)) Sustained=WallStickedL=1;
+			else if (Sustain(430, 770, 20, 2)) Sustained=1;
+			else if (Sustain(540, 740, 15, 2)) Sustained=1;
+			else if (Sustain(620, 710, 15, 2)) Sustained=1;
+			else if (Sustain(700, 780, 5, 2)) Sustained=1;
+			else if (Sustain(750, 750, 10, 2)) Sustained=1;
+			else if (WallStick(750, 750, 2, 5)) Sustained=WallStickedR=1;
+			else if (WallStick(758, 750, 2, 5)) Sustained=WallStickedL=1;
+			else if (Sustain(800, 780, 10, 2)) Sustained=1;
+			else if (WallStick(850, 0, 2, 800)) Sustained=WallStickedR=1;
+			else if (WallStick(798, 101, 2, 550)) Sustained=WallStickedL=1;
+			else if (Sustain(120, 630, 20, 2)) Sustained=1;
+			else if (Sustain(800, 650, 50, 2) && ButtonOn1>=4) Sustained=1;
+			else if (Sustain(50, 650, 750, 2) && ButtonOn1>=2) Sustained=1;
+			else if (Sustain(50, 400, 750, 2) && ButtonOn1>=5) Sustained=1;
+
+			else if (Sustain(150+P1x, 600, 15, 2)){
+				Sustained=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (WallStick(150+P1x, 600, 2, 40)){
+				Sustained=WallStickedR=1;
+				//if (P1Tour==0) x+=1;
+				//if (P1Tour==1) x-=1;
+				x=P1x+150-Size+1;
+				}
+			else if (WallStick(163+P1x, 600, 2, 40)){
+				Sustained=WallStickedL=1;
+				//if (P1Tour==0) x+=1;
+				//if (P1Tour==1) x-=1;
+				x=P1x+165-1;
+				}
+
+			else if (Sustain(250+P1x, 500, 15, 2)){
+				Sustained=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (WallStick(250+P1x, 500, 2, 40)){
+				Sustained=WallStickedR=1;
+				//if (P1Tour==0) x+=1;
+				//if (P1Tour==1) x-=1;
+				x=P1x+250-Size+1;
+				}
+			else if (WallStick(263+P1x, 500, 2, 40)){
+				Sustained=WallStickedL=1;
+				//if (P1Tour==0) x+=1;
+				//if (P1Tour==1) x-=1;
+				x=P1x+265-1;
+				}
+
+			else if (WallStick(350+P1x-2, 410, 5, 40)){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (WallStick(362+P1x, 410, 5, 40)){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+
+			else if (Sustain(550-P1x, 500, 15, 2)){
+				Sustained=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+			else if (WallStick(550-P1x-2, 500, 5, 40)){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+			else if (WallStick(562-P1x, 500, 5, 40)){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+
+			else if (Sustain(650-P1x, 600, 15, 2)){
+				Sustained=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+			else if (WallStick(650-P1x-2, 600, 5, 40)){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+			else if (WallStick(662-P1x, 600, 5, 40)){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) x-=1;
+				if (P1Tour==1) x+=1;
+				}
+
+			else if (Sustain(690+P1x, 500, 10, 2)){
+				Sustained=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (WallStick(690+P1x-2, 500, 5, 20)){
+				Sustained=WallStickedR=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (WallStick(697+P1x, 500, 5, 20)){
+				Sustained=WallStickedL=1;
+				if (P1Tour==0) x+=1;
+				if (P1Tour==1) x-=1;
+				}
+			else if (Sustain(800, 630, 20, 2)) Sustained=1;
+			else if (Sustain(800, 400, 50, 2) && ButtonOn1>=8) Sustained=1;
+			else if (Sustain(P2x, 365, 60, 2)){
+				Sustained=1;
+				if (x<P2x+55 && P2x+55<x+Size){
+					if (ButtonOn1==8 && P2x+60+15<850){
+						P2x+=1;
+						x+=1;
+						}
+					if (ButtonOn1==9 && P2x+30>585){
+						P2x-=1;
+						x-=1;
+						}
+					}
+				}
+			else if (WallStick(P2x+60, 300, 5, 40)) Sustained=WallStickedR=1;
+			else if (Sustain(P2x+60, 300, 15, 2)) Sustained=1;
+			else if (Colision(50, 199, 600, 2) && Down==0 && ButtonOn1==8){
+				Sustained=1;
+				Motion=0;
+				}
+			else if (Sustain(600, 130, 30, 2)) Sustained=1;		
+			else{
+				Sustained=WallStickedL=WallStickedR=0;
+				Motion=1;
+				}
+
+******
+
+		else{
+		if (k=='p'){
+			System.out.println("\n"+Pan2.x+"\t"+Pan2.y+"\t"+"Sustained="+Pan2.Sustained);
+			}
+		if (k=='P' && Pan2.Motion==1){
+			Pan2.Motion=2;
+			Pan2.ForceSustained=1;
+			}
+		else if (k=='P' && Pan2.Motion==2) Pan2.Motion=1;
+		if (k=='s' || k=='S') Pan2.ForceSustained=Pan2.Motion=1;
+		if (k=='r') Pan.initP=Pan2.initP=0;
+		if (Pan.Motion==1){
+			if (c==0x25){
+				Pan.MotionL=1;
+				Pan.Sens=0;
+				}
+			else if (c==0x27){
+				Pan.MotionR=1;
+				Pan.Sens=2;
+				}
+			//if (c==0x20 && Pan.SautLock==0 && Pan.Chute==0){
+			if (c==0x20 && Pan.SautLock==0){
+				Pan.Saut=1;
+				if (Pan.WallStickedR==1) Pan.x-=10;
+				if (Pan.WallStickedL==1) Pan.x+=10;
+				Pan.Sustained=0;
+				Pan.WallStickedR=Pan.WallStickedL=0;
+				}
+			if (c==0x20 && Pan2.SautLock==0){
+				Pan2.Saut=1;
+				if (Pan2.WallStickedR==1) Pan2.x-=10;
+				if (Pan2.WallStickedL==1) Pan2.x+=10;
+				Pan2.Sustained=0;
+				Pan2.WallStickedR=Pan2.WallStickedL=0;
+				}
+			}
+		else if (Pan.Motion==2){
+			if (c==0x25) Pan.x-=1;
+			else if (c==0x26) Pan.y-=1;
+			else if (c==0x27) Pan.x+=1;
+			else if (c==0x28) Pan.y+=1;
+			//if (c==0x20) Pan.y-=2;
+			}
+		else if (Pan.Motion==3){
+			if (c==0x25) Pan.x-=1;
+			else if (c==0x27) Pan.x+=1;
+			}
+		if (c==0x28) Pan.Down=1;
+		if (c==0x54 && Pan.Tab[40]==1) Pan.Tab[40]=0;
+		else if (c==0x54 && Pan.Tab[40]==0) Pan.Tab[40]=1;
+		if (k=='i') Pan.info=1;
+		if (k=='z' && c==0x26) Pan.SLight+=1;
+		else if (k=='z' && c==0x28 && Pan.SLight>0) Pan.SLight-=1;
+		if (k=='Z' && Pan.SLight!=50) Pan.SLight=50;
+		else if (k=='Z' && Pan.SLight==50) Pan.SLight=1000;
+
+		if (c==0x10) Pan.Motion=3;
+		if (k=='l' && Pan.Level>1){
+			Pan.initP=0;
+			Pan.Level-=1;
+			if (Pan.Level%5!=0) Pan.LevelColor=0;
+			//Pan2.initP=0;
+			//Pan2.Level-=1;
+			//if (Pan2.Level%5!=0) Pan2.LevelColor=0;
+			}
+		if (k=='L' && Pan.Level<50){
+			Pan.initP=0;
+			Pan.Level+=1;
+			if (Pan.Level%5!=0) Pan.LevelColor=0;
+			}
