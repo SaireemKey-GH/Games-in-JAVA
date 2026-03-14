@@ -1,0 +1,123 @@
+if (this.keyflag==0){
+			try{
+				Thread.sleep(3);
+				} catch (InterruptedException e) {e.printStackTrace();}
+			if (xDP1<this.x+((this.getWidth())/10)/4 && yDP1<this.y+((this.getHeight())/10)/4){
+				this.xDP1+=1;
+				this.yDP1+=1;
+				} 
+			if (xDP1>this.x+((this.getWidth())/10)/4 && yDP1<this.y+((this.getHeight())/10)/4){
+				this.xDP1-=1;
+				this.yDP1+=1;
+				} 
+			if (xDP1<this.x+((this.getWidth())/10)/4 && yDP1>this.y+((this.getHeight())/10)/4){
+				this.xDP1+=1;
+				this.yDP1-=1;
+				} 
+			if (xDP1>this.x+((this.getWidth())/10)/4 && yDP1>this.y+((this.getHeight())/10)/4){
+				this.xDP1-=1;
+				this.yDP1-=1;
+				} 
+			}
+
+
+----------------------------------------------Boucle losange violet
+try{
+	Thread.sleep(5);
+			} catch (InterruptedException e) {e.printStackTrace();}
+			//if (x1DP==20 && x2DP==40 && x3DP==60 && x4DP==40 && y1DP==120 && y2DP==100 && y3DP==120 && y4DP==140) losaTourDP=0;
+			if (losaTourDP==0){
+				if (x1DP<40); x1DP+=1;
+				if (x2DP<60); x2DP+=1;
+				if (x3DP>40); x3DP-=1;
+				if (x4DP>20); x4DP-=1;
+				if (y1DP>100); y1DP-=1;
+				if (y2DP<120); y2DP+=1;
+				if (y3DP<140); y3DP+=1;
+				if (y4DP>120); y4DP-=1;
+				losaTourDPk+=1;
+				}
+			if (losaTourDPk==20) losaTourDP=1;
+			//if (x4DP==20 && x1DP==40 && x2DP==60 && x3DP==40 && y4DP==120 && y1DP==100 && y2DP==120 && y3DP==140) losaTourDP=1;
+			if (losaTourDP==1){
+				if (x4DP<40); x4DP+=1;
+				if (x1DP<60); x1DP+=1;
+				if (x2DP>40); x2DP-=1;
+				if (x3DP>20); x3DP-=1;
+				if (y4DP>100); y4DP-=1;
+				if (y1DP<120); y1DP+=1;
+				if (y2DP<140); y2DP+=1;
+				if (y3DP>120); y3DP-=1;
+				losaTourDPk+=1;
+				}
+			if (losaTourDPk==40) losaTourDP=2;
+			//if (x3DP==20 && x4DP==40 && x1DP==60 && x2DP==40 && y3DP==120 && y4DP==100 && y1DP==120 && y2DP==140) losaTourDP=2;
+			if (losaTourDP==2){
+				if (x3DP<40); x3DP+=1;
+				if (x4DP<60); x4DP+=1;
+				if (x1DP>40); x1DP-=1;
+				if (x2DP>20); x2DP-=1;
+				if (y3DP>100); y3DP-=1;
+				if (y4DP<120); y4DP+=1;
+				if (y1DP<140); y1DP+=1;
+				if (y2DP>120); y2DP-=1;
+				losaTourDPk+=1;
+				}
+			if (losaTourDPk==60) losaTourDP=3;
+			//if (x2DP==20 && x3DP==40 && x4DP==60 && x1DP==40 && y2DP==120 && y3DP==100 && y4DP==120 && y1DP==140) losaTourDP=3;
+			if (losaTourDP==3){
+				if (x2DP<40); x2DP+=1;
+				if (x3DP<60); x3DP+=1;
+				if (x4DP>40); x4DP-=1;
+				if (x1DP>20); x1DP-=1;
+				if (y2DP>100); y2DP-=1;
+				if (y3DP<120); y3DP+=1;
+				if (y4DP<140); y4DP+=1;
+				if (y1DP>120); y1DP-=1;
+				losaTourDPk+=1;
+				}
+			if (losaTourDPk==80){
+				losaTourDPk=0;
+				losaTourDP=0;
+				}
+			if (x1DP<this.x+20 && y1DP<this.y+20){
+				x1DP+=1;
+				x2DP+=1;
+				x3DP+=1;
+				x4DP+=1;
+				y1DP+=1;
+				y2DP+=1;
+				y3DP+=1;
+				y4DP+=1;
+				}
+			if (x1DP>this.x+20 && y1DP<this.y+20){
+				x1DP-=1;
+				x2DP-=1;
+				x3DP-=1;
+				x4DP-=1;
+				y1DP+=1;
+				y2DP+=1;
+				y3DP+=1;
+				y4DP+=1;
+				}
+			if (x1DP>this.x+20 && y1DP>this.y+20){
+				x1DP-=1;
+				x2DP-=1;
+				x3DP-=1;
+				x4DP-=1;
+				y1DP-=1;
+				y2DP-=1;
+				y3DP-=1;
+				y4DP-=1;
+				}
+			if (x1DP<this.x+20 && y1DP>this.y+20){
+				x1DP+=1;
+				x2DP+=1;
+				x3DP+=1;
+				x4DP+=1;
+				y1DP-=1;
+				y2DP-=1;
+				y3DP-=1;
+				y4DP-=1;
+				}
+			}
