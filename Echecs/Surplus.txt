@@ -1,0 +1,2279 @@
+*****Black Danger
+//***Pawn
+				if (BP1x==25+i*100 && BP1y==725-j*100 && BP1Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP2x==25+i*100 && BP2y==725-j*100 && BP2Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP3x==25+i*100 && BP3y==725-j*100 && BP3Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP4x==25+i*100 && BP4y==725-j*100 && BP4Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP5x==25+i*100 && BP5y==725-j*100 && BP5Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP6x==25+i*100 && BP6y==725-j*100 && BP6Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP7x==25+i*100 && BP7y==725-j*100 && BP7Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+				if (BP8x==25+i*100 && BP8y==725-j*100 && BP8Taken==0){
+					if (j-1>=0){
+						if (i-1>=0) Blackboard[i-1][j-1]=1;
+						if (i+1<8) Blackboard[i+1][j-1]=1;
+						}
+					}
+//***Knight
+				if (BK1x==25+i*100 && BK1y==725-j*100 && BK1Taken==0){
+					if (i+1<8 && j+2<8) Blackboard[i+1][j+2]=1;
+					if (i+2<8 && j+1<8) Blackboard[i+2][j+1]=1;
+					if (i+2<8 && j-1>=0) Blackboard[i+2][j-1]=1;
+					if (i+1<8 && j-2>=0) Blackboard[i+1][j-2]=1;
+					if (i-1>=0 && j-2>=0) Blackboard[i-1][j-2]=1;
+					if (i-2>=0 && j-1>=0) Blackboard[i-2][j-1]=1;
+					if (i-2>=0 && j+1<8) Blackboard[i-2][j+1]=1;
+					if (i-1>=0 && j+2<8) Blackboard[i-1][j+2]=1;
+					}
+				if (BK2x==25+i*100 && BK2y==725-j*100 && BK2Taken==0){
+					if (i+1<8 && j+2<8) Blackboard[i+1][j+2]=1;
+					if (i+2<8 && j+1<8) Blackboard[i+2][j+1]=1;
+					if (i+2<8 && j-1>=0) Blackboard[i+2][j-1]=1;
+					if (i+1<8 && j-2>=0) Blackboard[i+1][j-2]=1;
+					if (i-1>=0 && j-2>=0) Blackboard[i-1][j-2]=1;
+					if (i-2>=0 && j-1>=0) Blackboard[i-2][j-1]=1;
+					if (i-2>=0 && j+1<8) Blackboard[i-2][j+1]=1;
+					if (i-1>=0 && j+2<8) Blackboard[i-1][j+2]=1;
+					}
+//***Bishop
+				if (BB1x==25+i*100 && BB1y==725-j*100 && BB1Taken==0){
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Blackboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Blackboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Blackboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Blackboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Blackboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Blackboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Blackboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Blackboard[i-k][k+j]=1;
+						}
+					}
+				if (BB2x==25+i*100 && BB2y==725-j*100 && BB2Taken==0){
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Blackboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Blackboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Blackboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Blackboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Blackboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Blackboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Blackboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Blackboard[i-k][k+j]=1;
+						}
+					}
+//***Rook
+				if (BR1x==25+i*100 && BR1y==725-j*100 && BR1Taken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+					}
+				if (BR2x==25+i*100 && BR2y==725-j*100 && BR2Taken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+					}
+//***Queen
+				if (BQx==25+i*100 && BQy==725-j*100 && BQTaken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Blackboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Blackboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Blackboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Blackboard[i][k]=1;
+						}
+
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Blackboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Blackboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Blackboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Blackboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Blackboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Blackboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Blackboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Blackboard[i-k][k+j]=1;
+						}
+					}
+//***King
+				if (BKgx==25+i*100 && BKgy==725-j*100 && BKgTaken==0){
+					if (i+1<8){
+						Blackboard[i+1][j]=1;
+						if (j+1<8) Blackboard[i+1][j+1]=1;
+						if (j-1>=0) Blackboard[i+1][j-1]=1;
+						}
+					if (i-1>=0){
+						Blackboard[i-1][j]=1;
+						if (j+1<8) Blackboard[i-1][j+1]=1;
+						if (j-1>=0) Blackboard[i-1][j-1]=1;
+						}
+					if (j+1<8) Blackboard[i][j+1]=1;
+					if (j-1>=0) Blackboard[i][j-1]=1;
+					}
+				}
+			}
+
+
+
+
+
+
+*******White Danger
+//***Pawn
+				if (WP1x==25+i*100 && WP1y==725-j*100 && WP1Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP2x==25+i*100 && WP2y==725-j*100 && WP2Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP3x==25+i*100 && WP3y==725-j*100 && WP3Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP4x==25+i*100 && WP4y==725-j*100 && WP4Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP5x==25+i*100 && WP5y==725-j*100 && WP5Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP6x==25+i*100 && WP6y==725-j*100 && WP6Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP7x==25+i*100 && WP7y==725-j*100 && WP7Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+				if (WP8x==25+i*100 && WP8y==725-j*100 && WP8Taken==0){
+					if (j+1<8){
+						if (i-1>=0) Whiteboard[i-1][j+1]=1;
+						if (i+1<8) Whiteboard[i+1][j+1]=1;
+						}
+					}
+//***Knight
+				if (WK1x==25+i*100 && WK1y==725-j*100 && WK1Taken==0){
+					if (i+1<8 && j+2<8) Whiteboard[i+1][j+2]=1;
+					if (i+2<8 && j+1<8) Whiteboard[i+2][j+1]=1;
+					if (i+2<8 && j-1>=0) Whiteboard[i+2][j-1]=1;
+					if (i+1<8 && j-2>=0) Whiteboard[i+1][j-2]=1;
+					if (i-1>=0 && j-2>=0) Whiteboard[i-1][j-2]=1;
+					if (i-2>=0 && j-1>=0) Whiteboard[i-2][j-1]=1;
+					if (i-2>=0 && j+1<8) Whiteboard[i-2][j+1]=1;
+					if (i-1>=0 && j+2<8) Whiteboard[i-1][j+2]=1;
+					}
+				if (WK2x==25+i*100 && WK2y==725-j*100 && WK2Taken==0){
+					if (i+1<8 && j+2<8) Whiteboard[i+1][j+2]=1;
+					if (i+2<8 && j+1<8) Whiteboard[i+2][j+1]=1;
+					if (i+2<8 && j-1>=0) Whiteboard[i+2][j-1]=1;
+					if (i+1<8 && j-2>=0) Whiteboard[i+1][j-2]=1;
+					if (i-1>=0 && j-2>=0) Whiteboard[i-1][j-2]=1;
+					if (i-2>=0 && j-1>=0) Whiteboard[i-2][j-1]=1;
+					if (i-2>=0 && j+1<8) Whiteboard[i-2][j+1]=1;
+					if (i-1>=0 && j+2<8) Whiteboard[i-1][j+2]=1;
+					}
+//***Bishop
+				if (WB1x==25+i*100 && WB1y==725-j*100 && WB1Taken==0){
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Whiteboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Whiteboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Whiteboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Whiteboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Whiteboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Whiteboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Whiteboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Whiteboard[i-k][k+j]=1;
+						}
+					}
+				if (WB2x==25+i*100 && WB2y==725-j*100 && WB2Taken==0){
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Whiteboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Whiteboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Whiteboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Whiteboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Whiteboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Whiteboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Whiteboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Whiteboard[i-k][k+j]=1;
+						}
+					}
+//***Rook
+				if (WR1x==25+i*100 && WR1y==725-j*100 && WR1Taken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+					}
+				if (WR2x==25+i*100 && WR2y==725-j*100 && WR2Taken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+					}
+//***Queen
+				if (WQx==25+i*100 && WQy==725-j*100 && WQTaken==0){
+					for(int k=i+1; k<8; k++){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=i-1; k>=0; k--){
+						if (Chessboard[k][j]!=0){
+							Whiteboard[k][j]=1;
+							break;
+							}
+						if (Chessboard[k][j]==0) Whiteboard[k][j]=1;
+						}
+					for(int k=j+1; k<8; k++){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+					for(int k=j-1; k>=0; k--){
+						if (Chessboard[i][k]!=0){
+							Whiteboard[i][k]=1;
+							break;
+							}
+						if (Chessboard[i][k]==0) Whiteboard[i][k]=1;
+						}
+
+					for(int k=1; k+i<8 && k+j<8; k++){
+						if (Chessboard[k+i][k+j]!=0){
+							Whiteboard[k+i][k+j]=1;
+							break;
+							}
+						if (Chessboard[k+i][k+j]==0) Whiteboard[k+i][k+j]=1;
+						}
+					for(int k=1; k+i<8 && j-k>=0; k++){
+						if (Chessboard[k+i][j-k]!=0){
+							Whiteboard[k+i][j-k]=1;
+							break;
+							}
+						if (Chessboard[k+i][j-k]==0) Whiteboard[k+i][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && j-k>=0; k++){
+						if (Chessboard[i-k][j-k]!=0){
+							Whiteboard[i-k][j-k]=1;
+							break;
+							}
+						if (Chessboard[i-k][j-k]==0) Whiteboard[i-k][j-k]=1;
+						}
+					for(int k=1; i-k>=0 && k+j<8; k++){
+						if (Chessboard[i-k][k+j]!=0){
+							Whiteboard[i-k][k+j]=1;
+							break;
+							}
+						if (Chessboard[i-k][k+j]==0) Whiteboard[i-k][k+j]=1;
+						}
+					}
+//***King
+				if (WKgx==25+i*100 && WKgy==725-j*100 && WKgTaken==0){
+					if (i+1<8){
+						Whiteboard[i+1][j]=1;
+						if (j+1<8) Whiteboard[i+1][j+1]=1;
+						if (j-1>=0) Whiteboard[i+1][j-1]=1;
+						}
+					if (i-1>=0){
+						Whiteboard[i-1][j]=1;
+						if (j+1<8) Whiteboard[i-1][j+1]=1;
+						if (j-1>=0) Whiteboard[i-1][j-1]=1;
+						}
+					if (j+1<8) Whiteboard[i][j+1]=1;
+					if (j-1>=0) Whiteboard[i][j-1]=1;
+					}
+				}
+			}
+
+
+//********Move of White Pieces
+//***White
+			if (Turn==1){
+//***Pawn
+				if (SelectCaseX==WP1x && SelectCaseY==WP1y && WP1Taken==0) WP1Selected=1;
+				else WP1Selected=0;
+				if (WP1Selected==1 && WP1Promotion==0){
+					int FirstMove=0;
+					if (WP1y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							//if (Chessboard[CaseX][CaseY+i]==0) g.fillRect(SelectCaseX, SelectCaseY-i*100, 100, 100);
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP2x && SelectCaseY==WP2y && WP2Taken==0) WP2Selected=1;
+				else WP2Selected=0;
+				if (WP2Selected==1 && WP2Promotion==0){
+					int FirstMove=0;
+					if (WP2y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP3x && SelectCaseY==WP3y && WP3Taken==0) WP3Selected=1;
+				else WP3Selected=0;
+				if (WP3Selected==1 && WP3Promotion==0){
+					int FirstMove=0;
+					if (WP3y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP4x && SelectCaseY==WP4y && WP4Taken==0) WP4Selected=1;
+				else WP4Selected=0;
+				if (WP4Selected==1 && WP4Promotion==0){
+					int FirstMove=0;
+					if (WP4y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP5x && SelectCaseY==WP5y && WP5Taken==0) WP5Selected=1;
+				else WP5Selected=0;
+				if (WP5Selected==1 && WP5Promotion==0){
+					int FirstMove=0;
+					if (WP5y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP6x && SelectCaseY==WP6y && WP6Taken==0) WP6Selected=1;
+				else WP6Selected=0;
+				if (WP6Selected==1 && WP6Promotion==0){
+					int FirstMove=0;
+					if (WP6y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP7x && SelectCaseY==WP7y && WP7Taken==0) WP7Selected=1;
+				else WP7Selected=0;
+				if (WP7Selected==1 && WP7Promotion==0){
+					int FirstMove=0;
+					if (WP7y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==WP8x && SelectCaseY==WP8y && WP8Taken==0) WP8Selected=1;
+				else WP8Selected=0;
+				if (WP8Selected==1 && WP8Promotion==0){
+					int FirstMove=0;
+					if (WP8y==625) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY+1<=7){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY+i]!=0) break;
+							if (Chessboard[CaseX][CaseY+i]==0) Moveboard[CaseX][CaseY+i]=1;
+							}
+						if (CaseX-1>=0){
+							if (Chessboard[CaseX-1][CaseY+1]>=7) Moveboard[CaseX-1][CaseY+1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==2 && Chessboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=4;
+							}
+						if (CaseX+1<=7){
+							if (Chessboard[CaseX+1][CaseY+1]>=7) Moveboard[CaseX+1][CaseY+1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==2 && Chessboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=4;
+							}
+						}
+					}
+//***Rook
+				if (SelectCaseX==WR1x && SelectCaseY==WR1y && WR1Taken==0) WR1Selected=1;
+				else WR1Selected=0;
+				if (SelectCaseX==WR2x && SelectCaseY==WR2y && WR2Taken==0) WR2Selected=1;
+				else WR2Selected=0;
+				if ((WR1Selected==1 || WR2Selected==1) || (WP1Selected==1 && WP1Promotion==4) || (WP2Selected==1 && WP2Promotion==4) || (WP3Selected==1 && WP3Promotion==4) || (WP4Selected==1 && WP4Promotion==4) || (WP5Selected==1 && WP5Promotion==4) || (WP6Selected==1 && WP6Promotion==4) || (WP7Selected==1 && WP7Promotion==4) || (WP8Selected==1 && WP8Promotion==4)){
+					for(int i=CaseY+1; i<8; i++){
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7) break;
+						if (Chessboard[CaseX][i]>=7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseY-1; i>=0; i--){
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7) break;
+						if (Chessboard[CaseX][i]>=7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseX+1; i<8; i++){
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7) break;
+						if (Chessboard[i][CaseY]>=7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					for(int i=CaseX-1; i>=0; i--){
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7) break;
+						if (Chessboard[i][CaseY]>=7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					}
+//***Bishop
+				if (SelectCaseX==WB1x && SelectCaseY==WB1y && WB1Taken==0) WB1Selected=1;
+				else WB1Selected=0;
+				if (SelectCaseX==WB2x && SelectCaseY==WB2y && WB2Taken==0) WB2Selected=1;
+				else WB2Selected=0;
+				if ((WB1Selected==1 || WB2Selected==1) || (WP1Selected==1 && WP1Promotion==3) || (WP2Selected==1 && WP2Promotion==3) || (WP3Selected==1 && WP3Promotion==3) || (WP4Selected==1 && WP4Promotion==3) || (WP5Selected==1 && WP5Promotion==3) || (WP6Selected==1 && WP6Promotion==3) || (WP7Selected==1 && WP7Promotion==3) || (WP8Selected==1 && WP8Promotion==3)){
+					for(int i=1; i+CaseX<8 && CaseY+i<8; i++){
+						if (0<Chessboard[CaseX+i][CaseY+i] && Chessboard[CaseX+i][CaseY+i]<7) break;
+						if (Chessboard[CaseX+i][CaseY+i]>=7){
+							Moveboard[CaseX+i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY+i]==0) Moveboard[CaseX+i][CaseY+i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY+i<8; i++){
+						if (0<Chessboard[CaseX-i][CaseY+i] && Chessboard[CaseX-i][CaseY+i]<7) break;
+						if (Chessboard[CaseX-i][CaseY+i]>=7){
+							Moveboard[CaseX-i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY+i]==0) Moveboard[CaseX-i][CaseY+i]=1;
+						}
+					for(int i=1; i+CaseX<8 && CaseY-i>=0; i++){
+						if (0<Chessboard[CaseX+i][CaseY-i] && Chessboard[CaseX+i][CaseY-i]<7) break;
+						if (Chessboard[CaseX+i][CaseY-i]>=7){
+							Moveboard[CaseX+i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY-i]==0) Moveboard[CaseX+i][CaseY-i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY-i>=0; i++){
+						if (0<Chessboard[CaseX-i][CaseY-i] && Chessboard[CaseX-i][CaseY-i]<7) break;
+						if (Chessboard[CaseX-i][CaseY-i]>=7){
+							Moveboard[CaseX-i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY-i]==0) Moveboard[CaseX-i][CaseY-i]=1;
+						}
+					}
+//***Knight
+				if (SelectCaseX==WK1x && SelectCaseY==WK1y && WK1Taken==0) WK1Selected=1;
+				else WK1Selected=0;
+				if (SelectCaseX==WK2x && SelectCaseY==WK2y && WK2Taken==0) WK2Selected=1;
+				else WK2Selected=0;
+				if ((WK1Selected==1 || WK2Selected==1) || (WP1Selected==1 && WP1Promotion==2) || (WP2Selected==1 && WP2Promotion==2) || (WP3Selected==1 && WP3Promotion==2) || (WP4Selected==1 && WP4Promotion==2) || (WP5Selected==1 && WP5Promotion==2) || (WP6Selected==1 && WP6Promotion==2) || (WP7Selected==1 && WP7Promotion==2) || (WP8Selected==1 && WP8Promotion==2)){
+					if (CaseX+1<8 && CaseY+2<8){
+						if (Chessboard[CaseX+1][CaseY+2]==0) Moveboard[CaseX+1][CaseY+2]=1;
+						else if (Chessboard[CaseX+1][CaseY+2]>=7) Moveboard[CaseX+1][CaseY+2]=2;
+						}
+					if (CaseX+2<8 && CaseY+1<8){
+						if (Chessboard[CaseX+2][CaseY+1]==0) Moveboard[CaseX+2][CaseY+1]=1;
+						else if (Chessboard[CaseX+2][CaseY+1]>=7) Moveboard[CaseX+2][CaseY+1]=2;
+						}
+					if (CaseX+2<8 && CaseY-1>=0){
+						if (Chessboard[CaseX+2][CaseY-1]==0) Moveboard[CaseX+2][CaseY-1]=1;
+						else if (Chessboard[CaseX+2][CaseY-1]>=7) Moveboard[CaseX+2][CaseY-1]=2;
+						}
+					if (CaseX+1<8 && CaseY-2>=0){
+						if (Chessboard[CaseX+1][CaseY-2]==0) Moveboard[CaseX+1][CaseY-2]=1;
+						else if (Chessboard[CaseX+1][CaseY-2]>=7) Moveboard[CaseX+1][CaseY-2]=2;
+						}
+					if (CaseX-1>=0 && CaseY-2>=0){
+						if (Chessboard[CaseX-1][CaseY-2]==0) Moveboard[CaseX-1][CaseY-2]=1;
+						else if (Chessboard[CaseX-1][CaseY-2]>=7) Moveboard[CaseX-1][CaseY-2]=2;
+						}
+					if (CaseX-2>=0 && CaseY-1>=0){
+						if (Chessboard[CaseX-2][CaseY-1]==0) Moveboard[CaseX-2][CaseY-1]=1;
+						else if (Chessboard[CaseX-2][CaseY-1]>=7) Moveboard[CaseX-2][CaseY-1]=2;
+						}
+					if (CaseX-2>=0 && CaseY+1<8){
+						if (Chessboard[CaseX-2][CaseY+1]==0) Moveboard[CaseX-2][CaseY+1]=1;
+						else if (Chessboard[CaseX-2][CaseY+1]>=7) Moveboard[CaseX-2][CaseY+1]=2;
+						}
+					if (CaseX-1>=0 && CaseY+2<8){
+						if (Chessboard[CaseX-1][CaseY+2]==0) Moveboard[CaseX-1][CaseY+2]=1;
+						else if (Chessboard[CaseX-1][CaseY+2]>=7) Moveboard[CaseX-1][CaseY+2]=2;
+						}
+					}				
+//***Queen
+				if (SelectCaseX==WQx && SelectCaseY==WQy && WQTaken==0) WQSelected=1;
+				else WQSelected=0;
+				if (WQSelected==1 || (WP1Selected==1 && WP1Promotion==5) || (WP2Selected==1 && WP2Promotion==5) || (WP3Selected==1 && WP3Promotion==5) || (WP4Selected==1 && WP4Promotion==5) || (WP5Selected==1 && WP5Promotion==5) || (WP6Selected==1 && WP6Promotion==5) || (WP7Selected==1 && WP7Promotion==5) || (WP8Selected==1 && WP8Promotion==5)){
+					for(int i=CaseY+1; i<8; i++){
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7) break;
+						else if (Chessboard[CaseX][i]>=7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseY-1; i>=0; i--){
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7) break;
+						else if (Chessboard[CaseX][i]>=7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseX+1; i<8; i++){
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7) break;
+						else if (Chessboard[i][CaseY]>=7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						else if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					for(int i=CaseX-1; i>=0; i--){
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7) break;
+						else if (Chessboard[i][CaseY]>=7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						else if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+
+					for(int i=1; i+CaseX<8 && CaseY+i<8; i++){
+						if (0<Chessboard[CaseX+i][CaseY+i] && Chessboard[CaseX+i][CaseY+i]<7) break;
+						else if (Chessboard[CaseX+i][CaseY+i]>=7){
+							Moveboard[CaseX+i][CaseY+i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX+i][CaseY+i]==0) Moveboard[CaseX+i][CaseY+i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY+i<8; i++){
+						if (0<Chessboard[CaseX-i][CaseY+i] && Chessboard[CaseX-i][CaseY+i]<7) break;
+						else if (Chessboard[CaseX-i][CaseY+i]>=7){
+							Moveboard[CaseX-i][CaseY+i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX-i][CaseY+i]==0) Moveboard[CaseX-i][CaseY+i]=1;
+						}
+					for(int i=1; i+CaseX<8 && CaseY-i>=0; i++){
+						if (0<Chessboard[CaseX+i][CaseY-i] && Chessboard[CaseX+i][CaseY-i]<7) break;
+						else if (Chessboard[CaseX+i][CaseY-i]>=7){
+							Moveboard[CaseX+i][CaseY-i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX+i][CaseY-i]==0) Moveboard[CaseX+i][CaseY-i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY-i>=0; i++){
+						if (0<Chessboard[CaseX-i][CaseY-i] && Chessboard[CaseX-i][CaseY-i]<7) break;
+						else if (Chessboard[CaseX-i][CaseY-i]>=7){
+							Moveboard[CaseX-i][CaseY-i]=2;
+							break;
+							}
+						else if (Chessboard[CaseX-i][CaseY-i]==0) Moveboard[CaseX-i][CaseY-i]=1;
+						}
+					}
+//***King
+				if (SelectCaseX==WKgx && SelectCaseY==WKgy && WKgTaken==0) WKgSelected=1;
+				else WKgSelected=0;
+				if (WKgSelected==1){
+					if (CaseX-1>=0){
+						if (Chessboard[CaseX-1][CaseY]==0 && Blackboard[CaseX-1][CaseY]==0) Moveboard[CaseX-1][CaseY]=1;
+						else if (Chessboard[CaseX-1][CaseY]>=7 && Blackboard[CaseX-1][CaseY]==0) Moveboard[CaseX-1][CaseY]=2;
+						if (CaseY-1>=0){
+							if (Chessboard[CaseX-1][CaseY-1]==0 && Blackboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=1;
+							else if (Chessboard[CaseX-1][CaseY-1]>=7 && Blackboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=2;
+							}
+						if (CaseY+1<8){
+							if (Chessboard[CaseX-1][CaseY+1]==0 && Blackboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=1;
+							else if (Chessboard[CaseX-1][CaseY+1]>=7 && Blackboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=2;
+							}
+						}
+					if (CaseX+1<8){
+						if (Chessboard[CaseX+1][CaseY]==0 && Blackboard[CaseX+1][CaseY]==0) Moveboard[CaseX+1][CaseY]=1;
+						else if (Chessboard[CaseX+1][CaseY]>=7 && Blackboard[CaseX+1][CaseY]==0) Moveboard[CaseX+1][CaseY]=2;
+						if (CaseY-1>=0){
+							if (Chessboard[CaseX+1][CaseY-1]==0 && Blackboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=1;
+							else if (Chessboard[CaseX+1][CaseY-1]>=7 && Blackboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=2;
+							}
+						if (CaseY+1<8){
+							if (Chessboard[CaseX+1][CaseY+1]==0 && Blackboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=1;
+							else if (Chessboard[CaseX+1][CaseY+1]>=7 && Blackboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=2;
+							}
+						}
+					if (CaseY+1<8){
+						if (Chessboard[CaseX][CaseY+1]==0 && Blackboard[CaseX][CaseY+1]==0) Moveboard[CaseX][CaseY+1]=1;
+						else if (Chessboard[CaseX][CaseY+1]>=7 && Blackboard[CaseX][CaseY+1]==0) Moveboard[CaseX][CaseY+1]=2;
+						}
+					if (CaseY-1>=0){
+						if (Chessboard[CaseX][CaseY-1]==0 && Blackboard[CaseX][CaseY-1]==0) Moveboard[CaseX][CaseY-1]=1;
+						else if (Chessboard[CaseX][CaseY-1]>=7 && Blackboard[CaseX][CaseY-1]==0) Moveboard[CaseX][CaseY-1]=2;
+						}
+					if (WKgNeverMoved==0 && WKgTaken==0 && WR2Taken==0 && WR2NeverMoved==0 && WKgCheck==0 && Chessboard[5][0]==0 && Chessboard[6][0]==0 && Blackboard[5][0]==0 && Blackboard[6][0]==0){
+						Moveboard[6][0]=3;
+						}
+					if (WKgNeverMoved==0 && WKgTaken==0 && WR1Taken==0 && WR1NeverMoved==0 && WKgCheck==0 && Chessboard[1][0]==0 && Chessboard[2][0]==0 && Chessboard[3][0]==0 && Blackboard[1][0]==0 && Blackboard[2][0]==0 && Blackboard[3][0]==0){
+						Moveboard[2][0]=3;
+						}
+						
+					}
+					
+				}
+
+
+//*********Move of Black Pieces
+//***Black
+			else if (Turn==2){
+//***Pawn
+				if (SelectCaseX==BP1x && SelectCaseY==BP1y && BP1Taken==0) BP1Selected=1;
+				else BP1Selected=0;
+				if (BP1Selected==1 && BP1Promotion==0){
+					int FirstMove=0;
+					if (BP1y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP2x && SelectCaseY==BP2y && BP2Taken==0) BP2Selected=1;
+				else BP2Selected=0;
+				if (BP2Selected==1 && BP2Promotion==0){
+					int FirstMove=0;
+					if (BP2y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP3x && SelectCaseY==BP3y && BP3Taken==0) BP3Selected=1;
+				else BP3Selected=0;
+				if (BP3Selected==1 && BP3Promotion==0){
+					int FirstMove=0;
+					if (BP3y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP4x && SelectCaseY==BP4y && BP4Taken==0) BP4Selected=1;
+				else BP4Selected=0;
+				if (BP4Selected==1 && BP4Promotion==0){
+					int FirstMove=0;
+					if (BP4y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP5x && SelectCaseY==BP5y && BP5Taken==0) BP5Selected=1;
+				else BP5Selected=0;
+				if (BP5Selected==1 && BP5Promotion==0){
+					int FirstMove=0;
+					if (BP5y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP6x && SelectCaseY==BP6y && BP6Taken==0) BP6Selected=1;
+				else BP6Selected=0;
+				if (BP6Selected==1 && BP6Promotion==0){
+					int FirstMove=0;
+					if (BP6y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP7x && SelectCaseY==BP7y && BP7Taken==0) BP7Selected=1;
+				else BP7Selected=0;
+				if (BP7Selected==1 && BP7Promotion==0){
+					int FirstMove=0;
+					if (BP7y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+				if (SelectCaseX==BP8x && SelectCaseY==BP8y && BP8Taken==0) BP8Selected=1;
+				else BP8Selected=0;
+				if (BP8Selected==1 && BP8Promotion==0){
+					int FirstMove=0;
+					if (BP8y==125) FirstMove=1;
+					else FirstMove=0;
+					if (CaseY-1>=0){
+						for(int i=1; i<2+FirstMove; i++){
+							if (Chessboard[CaseX][CaseY-i]!=0) break;
+							if (Chessboard[CaseX][CaseY-i]==0) Moveboard[CaseX][CaseY-i]=1;
+							}
+						if (CaseX-1>=0){
+							if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7) Moveboard[CaseX-1][CaseY-1]=2;
+							else if (Pawnboard[CaseX-1][CaseY]==1 && Chessboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=4;
+							}
+						if (CaseX+1<=7){
+							if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7) Moveboard[CaseX+1][CaseY-1]=2;
+							else if (Pawnboard[CaseX+1][CaseY]==1 && Chessboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=4;
+							}
+						}
+					}
+//***Rook
+				if (SelectCaseX==BR1x && SelectCaseY==BR1y && BR1Taken==0) BR1Selected=1;
+				else BR1Selected=0;
+				if (SelectCaseX==BR2x && SelectCaseY==BR2y && BR2Taken==0) BR2Selected=1;
+				else BR2Selected=0;
+				if ((BR1Selected==1 || BR2Selected==1) || (BP1Selected==1 && BP1Promotion==4) || (BP2Selected==1 && BP2Promotion==4) || (BP3Selected==1 && BP3Promotion==4) || (BP4Selected==1 && BP4Promotion==4) || (BP5Selected==1 && BP5Promotion==4) || (BP6Selected==1 && BP6Promotion==4) || (BP7Selected==1 && BP7Promotion==4) || (BP8Selected==1 && BP8Promotion==4)){
+					for(int i=CaseY+1; i<8; i++){
+						if (Chessboard[CaseX][i]>=7) break;
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseY-1; i>=0; i--){
+						if (Chessboard[CaseX][i]>=7) break;
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseX+1; i<8; i++){
+						if (Chessboard[i][CaseY]>=7) break;
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					for(int i=CaseX-1; i>=0; i--){
+						if (Chessboard[i][CaseY]>=7) break;
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					}
+//***Bishop
+				if (SelectCaseX==BB1x && SelectCaseY==BB1y && BB1Taken==0) BB1Selected=1;
+				else BB1Selected=0;
+				if (SelectCaseX==BB2x && SelectCaseY==BB2y && BB2Taken==0) BB2Selected=1;
+				else BB2Selected=0;
+				if ((BB1Selected==1 || BB2Selected==1) || (BP1Selected==1 && BP1Promotion==3) || (BP2Selected==1 && BP2Promotion==3) || (BP3Selected==1 && BP3Promotion==3) || (BP4Selected==1 && BP4Promotion==3) || (BP5Selected==1 && BP5Promotion==3) || (BP6Selected==1 && BP6Promotion==3) || (BP7Selected==1 && BP7Promotion==3) || (BP8Selected==1 && BP8Promotion==3)){
+					for(int i=1; i+CaseX<8 && CaseY+i<8; i++){
+						if (Chessboard[CaseX+i][CaseY+i]>=7) break;
+						if (0<Chessboard[CaseX+i][CaseY+i] && Chessboard[CaseX+i][CaseY+i]<7){
+							Moveboard[CaseX+i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY+i]==0) Moveboard[CaseX+i][CaseY+i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY+i<8; i++){
+						if (Chessboard[CaseX-i][CaseY+i]>=7) break;
+						if (0<Chessboard[CaseX-i][CaseY+i] && Chessboard[CaseX-i][CaseY+i]<7){
+							Moveboard[CaseX-i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY+i]==0) Moveboard[CaseX-i][CaseY+i]=1;
+						}
+					for(int i=1; i+CaseX<8 && CaseY-i>=0; i++){
+						if (Chessboard[CaseX+i][CaseY-i]>=7) break;
+						if (0<Chessboard[CaseX+i][CaseY-i] && Chessboard[CaseX+i][CaseY-i]<7){
+							Moveboard[CaseX+i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY-i]==0) Moveboard[CaseX+i][CaseY-i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY-i>=0; i++){
+						if (Chessboard[CaseX-i][CaseY-i]>=7) break;
+						if (0<Chessboard[CaseX-i][CaseY-i] && Chessboard[CaseX-i][CaseY-i]<7){
+							Moveboard[CaseX-i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY-i]==0) Moveboard[CaseX-i][CaseY-i]=1;
+						}
+					}
+//***Knight
+				if (SelectCaseX==BK1x && SelectCaseY==BK1y && BK1Taken==0) BK1Selected=1;
+				else BK1Selected=0;
+				if (SelectCaseX==BK2x && SelectCaseY==BK2y && BK2Taken==0) BK2Selected=1;
+				else BK2Selected=0;
+				if ((BK1Selected==1 || BK2Selected==1) || (BP1Selected==1 && BP1Promotion==2) || (BP2Selected==1 && BP2Promotion==2) || (BP3Selected==1 && BP3Promotion==2) || (BP4Selected==1 && BP4Promotion==2) || (BP5Selected==1 && BP5Promotion==2) || (BP6Selected==1 && BP6Promotion==2) || (BP7Selected==1 && BP7Promotion==2) || (BP8Selected==1 && BP8Promotion==2)){
+					if (CaseX+1<8 && CaseY+2<8){
+						if (Chessboard[CaseX+1][CaseY+2]==0) Moveboard[CaseX+1][CaseY+2]=1;
+						else if (0<Chessboard[CaseX+1][CaseY+2] && Chessboard[CaseX+1][CaseY+2]<7) Moveboard[CaseX+1][CaseY+2]=2;
+						}
+					if (CaseX+2<8 && CaseY+1<8){
+						if (Chessboard[CaseX+2][CaseY+1]==0) Moveboard[CaseX+2][CaseY+1]=1;
+						else if (0<Chessboard[CaseX+2][CaseY+1] && Chessboard[CaseX+2][CaseY+1]<7) Moveboard[CaseX+2][CaseY+1]=2;
+						}
+					if (CaseX+2<8 && CaseY-1>=0){
+						if (Chessboard[CaseX+2][CaseY-1]==0) Moveboard[CaseX+2][CaseY-1]=1;
+						else if (0<Chessboard[CaseX+2][CaseY-1] && Chessboard[CaseX+2][CaseY-1]<7) Moveboard[CaseX+2][CaseY-1]=2;
+						}
+					if (CaseX+1<8 && CaseY-2>=0){
+						if (Chessboard[CaseX+1][CaseY-2]==0) Moveboard[CaseX+1][CaseY-2]=1;
+						else if (0<Chessboard[CaseX+1][CaseY-2] && Chessboard[CaseX+1][CaseY-2]<7) Moveboard[CaseX+1][CaseY-2]=2;
+						}
+					if (CaseX-1>=0 && CaseY-2>=0){
+						if (Chessboard[CaseX-1][CaseY-2]==0) Moveboard[CaseX-1][CaseY-2]=1;
+						else if (0<Chessboard[CaseX-1][CaseY-2] && Chessboard[CaseX-1][CaseY-2]<7) Moveboard[CaseX-1][CaseY-2]=2;
+						}
+					if (CaseX-2>=0 && CaseY-1>=0){
+						if (Chessboard[CaseX-2][CaseY-1]==0) Moveboard[CaseX-2][CaseY-1]=1;
+						else if (0<Chessboard[CaseX-2][CaseY-1] && Chessboard[CaseX-2][CaseY-1]<7) Moveboard[CaseX-2][CaseY-1]=2;
+						}
+					if (CaseX-2>=0 && CaseY+1<8){
+						if (Chessboard[CaseX-2][CaseY+1]==0) Moveboard[CaseX-2][CaseY+1]=1;
+						else if (0<Chessboard[CaseX-2][CaseY+1] && Chessboard[CaseX-2][CaseY+1]<7) Moveboard[CaseX-2][CaseY+1]=2;
+						}
+					if (CaseX-1>=0 && CaseY+2<8){
+						if (Chessboard[CaseX-1][CaseY+2]==0) Moveboard[CaseX-1][CaseY+2]=1;
+						else if (0<Chessboard[CaseX-1][CaseY+2] && Chessboard[CaseX-1][CaseY+2]<7) Moveboard[CaseX-1][CaseY+2]=2;
+						}
+					}
+//***Queen
+				if (SelectCaseX==BQx && SelectCaseY==BQy && BQTaken==0) BQSelected=1;
+				else BQSelected=0;
+				if (BQSelected==1 || (BP1Selected==1 && BP1Promotion==5) || (BP2Selected==1 && BP2Promotion==5) || (BP3Selected==1 && BP3Promotion==5) || (BP4Selected==1 && BP4Promotion==5) || (BP5Selected==1 && BP5Promotion==5) || (BP6Selected==1 && BP6Promotion==5) || (BP7Selected==1 && BP7Promotion==5) || (BP8Selected==1 && BP8Promotion==5)){
+					for(int i=CaseY+1; i<8; i++){
+						if (Chessboard[CaseX][i]>=7) break;
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseY-1; i>=0; i--){
+						if (Chessboard[CaseX][i]>=7) break;
+						if (0<Chessboard[CaseX][i] && Chessboard[CaseX][i]<7){
+							Moveboard[CaseX][i]=2;
+							break;
+							}
+						if (Chessboard[CaseX][i]==0) Moveboard[CaseX][i]=1;
+						}
+					for(int i=CaseX+1; i<8; i++){
+						if (Chessboard[i][CaseY]>=7) break;
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+					for(int i=CaseX-1; i>=0; i--){
+						if (Chessboard[i][CaseY]>=7) break;
+						if (0<Chessboard[i][CaseY] && Chessboard[i][CaseY]<7){
+							Moveboard[i][CaseY]=2;
+							break;
+							}
+						if (Chessboard[i][CaseY]==0) Moveboard[i][CaseY]=1;
+						}
+
+					for(int i=1; i+CaseX<8 && CaseY+i<8; i++){
+						if (Chessboard[CaseX+i][CaseY+i]>=7) break;
+						if (0<Chessboard[CaseX+i][CaseY+i] && Chessboard[CaseX+i][CaseY+i]<7){
+							Moveboard[CaseX+i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY+i]==0) Moveboard[CaseX+i][CaseY+i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY+i<8; i++){
+						if (Chessboard[CaseX-i][CaseY+i]>=7) break;
+						if (0<Chessboard[CaseX-i][CaseY+i] && Chessboard[CaseX-i][CaseY+i]<7){
+							Moveboard[CaseX-i][CaseY+i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY+i]==0) Moveboard[CaseX-i][CaseY+i]=1;
+						}
+					for(int i=1; i+CaseX<8 && CaseY-i>=0; i++){
+						if (Chessboard[CaseX+i][CaseY-i]>=7) break;
+						if (0<Chessboard[CaseX+i][CaseY-i] && Chessboard[CaseX+i][CaseY-i]<7){
+							Moveboard[CaseX+i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX+i][CaseY-i]==0) Moveboard[CaseX+i][CaseY-i]=1;
+						}
+					for(int i=1; CaseX-i>=0 && CaseY-i>=0; i++){
+						if (Chessboard[CaseX-i][CaseY-i]>=7) break;
+						if (0<Chessboard[CaseX-i][CaseY-i] && Chessboard[CaseX-i][CaseY-i]<7){
+							Moveboard[CaseX-i][CaseY-i]=2;
+							break;
+							}
+						if (Chessboard[CaseX-i][CaseY-i]==0) Moveboard[CaseX-i][CaseY-i]=1;
+						}
+					}
+//***King
+				if (SelectCaseX==BKgx && SelectCaseY==BKgy && BKgTaken==0) BKgSelected=1;
+				else BKgSelected=0;
+				if (BKgSelected==1){
+					if (CaseX-1>=0){
+						if (Chessboard[CaseX-1][CaseY]==0 && Whiteboard[CaseX-1][CaseY]==0) Moveboard[CaseX-1][CaseY]=1;
+						else if (0<Chessboard[CaseX-1][CaseY] && Chessboard[CaseX-1][CaseY]<7 && Whiteboard[CaseX-1][CaseY]==0) Moveboard[CaseX-1][CaseY]=2;
+						if (CaseY-1>=0){
+							if (Chessboard[CaseX-1][CaseY-1]==0 && Whiteboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=1;
+							else if (0<Chessboard[CaseX-1][CaseY-1] && Chessboard[CaseX-1][CaseY-1]<7 && Whiteboard[CaseX-1][CaseY-1]==0) Moveboard[CaseX-1][CaseY-1]=2;
+							}
+						if (CaseY+1<8){
+							if (Chessboard[CaseX-1][CaseY+1]==0 && Whiteboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=1;
+							else if (0<Chessboard[CaseX-1][CaseY+1] && Chessboard[CaseX-1][CaseY+1]<7 && Whiteboard[CaseX-1][CaseY+1]==0) Moveboard[CaseX-1][CaseY+1]=2;
+							}
+						}
+					if (CaseX+1<8){
+						if (Chessboard[CaseX+1][CaseY]==0 && Whiteboard[CaseX+1][CaseY]==0) Moveboard[CaseX+1][CaseY]=1;
+						else if (0<Chessboard[CaseX+1][CaseY] && Chessboard[CaseX+1][CaseY]<7 && Whiteboard[CaseX+1][CaseY]==0) Moveboard[CaseX+1][CaseY]=2;
+						if (CaseY-1>=0){
+							if (Chessboard[CaseX+1][CaseY-1]==0 && Whiteboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=1;
+							else if (0<Chessboard[CaseX+1][CaseY-1] && Chessboard[CaseX+1][CaseY-1]<7 && Whiteboard[CaseX+1][CaseY-1]==0) Moveboard[CaseX+1][CaseY-1]=2;
+							}
+						if (CaseY+1<8){
+							if (Chessboard[CaseX+1][CaseY+1]==0 && Whiteboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=1;
+							else if (0<Chessboard[CaseX+1][CaseY+1] && Chessboard[CaseX+1][CaseY+1]<7 && Whiteboard[CaseX+1][CaseY+1]==0) Moveboard[CaseX+1][CaseY+1]=2;
+							}
+						}
+					if (CaseY+1<8){
+						if (Chessboard[CaseX][CaseY+1]==0 && Whiteboard[CaseX][CaseY+1]==0) Moveboard[CaseX][CaseY+1]=1;
+						else if (0<Chessboard[CaseX][CaseY+1] && Chessboard[CaseX][CaseY+1]<7 && Whiteboard[CaseX][CaseY+1]==0) Moveboard[CaseX][CaseY+1]=2;
+						}
+					if (CaseY-1>=0){
+						if (Chessboard[CaseX][CaseY-1]==0 && Whiteboard[CaseX][CaseY-1]==0) Moveboard[CaseX][CaseY-1]=1;
+						else if (0<Chessboard[CaseX][CaseY-1] && Chessboard[CaseX][CaseY-1]<7 && Whiteboard[CaseX][CaseY-1]==0) Moveboard[CaseX][CaseY-1]=2;
+						}
+					if (BKgNeverMoved==0 && BKgTaken==0 && BR2Taken==0 && BR2NeverMoved==0 && BKgCheck==0 && Chessboard[5][7]==0 && Chessboard[6][7]==0 && Whiteboard[5][7]==0 && Whiteboard[6][7]==0){
+						Moveboard[6][7]=3;
+						}
+					if (BKgNeverMoved==0 && BKgTaken==0 && BR1Taken==0 && BR1NeverMoved==0 && BKgCheck==0 && Chessboard[1][7]==0 && Chessboard[2][7]==0 && Chessboard[3][7]==0 && Whiteboard[1][7]==0 && Whiteboard[2][7]==0 && Whiteboard[3][7]==0){
+						Moveboard[2][7]=3;
+						}
+					}
+
+
+
+///******** Play Turn White Pieces
+//***White
+//***Pawn
+		if (c==1 && Pan.WP1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP1x==25+i*100 && Pan.WP1y==725-j*100){
+							if (Pan.WP1y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP1x=25+Pan.CaseX*100;
+				Pan.WP1y=725-Pan.CaseY*100;
+				Pan.WP1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=11;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP2x==25+i*100 && Pan.WP2y==725-j*100){
+							if (Pan.WP2y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP2x=25+Pan.CaseX*100;
+				Pan.WP2y=725-Pan.CaseY*100;
+				Pan.WP2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=12;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP3Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP3x==25+i*100 && Pan.WP3y==725-j*100){
+							if (Pan.WP3y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP3x=25+Pan.CaseX*100;
+				Pan.WP3y=725-Pan.CaseY*100;
+				Pan.WP3Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=13;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP4Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP4x==25+i*100 && Pan.WP4y==725-j*100){
+							if (Pan.WP4y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP4x=25+Pan.CaseX*100;
+				Pan.WP4y=725-Pan.CaseY*100;
+				Pan.WP4Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=14;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP5Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP5x==25+i*100 && Pan.WP5y==725-j*100){
+							if (Pan.WP5y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP5x=25+Pan.CaseX*100;
+				Pan.WP5y=725-Pan.CaseY*100;
+				Pan.WP5Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=15;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP6Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP6x==25+i*100 && Pan.WP6y==725-j*100){
+							if (Pan.WP6y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP6x=25+Pan.CaseX*100;
+				Pan.WP6y=725-Pan.CaseY*100;
+				Pan.WP6Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=16;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP7Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP7x==25+i*100 && Pan.WP7y==725-j*100){
+							if (Pan.WP7y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP7x=25+Pan.CaseX*100;
+				Pan.WP7y=725-Pan.CaseY*100;
+				Pan.WP7Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=17;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WP8Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WP8x==25+i*100 && Pan.WP8y==725-j*100){
+							if (Pan.WP8y==625 && Pan.CaseY==3) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=1;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WP8x=25+Pan.CaseX*100;
+				Pan.WP8y=725-Pan.CaseY*100;
+				Pan.WP8Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=1;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=18;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY-1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY-1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+//***Knight
+		else if (c==1 && Pan.WK1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WK1x==25+i*100 && Pan.WK1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WK1x=25+Pan.CaseX*100;
+				Pan.WK1y=725-Pan.CaseY*100;
+				Pan.WK1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=2;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=21;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WK2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WK2x==25+i*100 && Pan.WK2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WK2x=25+Pan.CaseX*100;
+				Pan.WK2y=725-Pan.CaseY*100;
+				Pan.WK2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=2;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=22;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+//***Rook
+		else if (c==1 && Pan.WR1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WR1x==25+i*100 && Pan.WR1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WR1x=25+Pan.CaseX*100;
+				Pan.WR1y=725-Pan.CaseY*100;
+				Pan.WR1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=4;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=41;
+				Pan.WR1NeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WR2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WR2x==25+i*100 && Pan.WR2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WR2x=25+Pan.CaseX*100;
+				Pan.WR2y=725-Pan.CaseY*100;
+				Pan.WR2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=4;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=42;
+				Pan.WR2NeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+//***Bishop
+		else if (c==1 && Pan.WB1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WB1x==25+i*100 && Pan.WB1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WB1x=25+Pan.CaseX*100;
+				Pan.WB1y=725-Pan.CaseY*100;
+				Pan.WB1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=3;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=31;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		else if (c==1 && Pan.WB2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WB2x==25+i*100 && Pan.WB2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WB2x=25+Pan.CaseX*100;
+				Pan.WB2y=725-Pan.CaseY*100;
+				Pan.WB2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=3;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=32;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+//***Queen
+		else if (c==1 && Pan.WQSelected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				int C = Pan.Chessboard[Pan.CaseX][Pan.CaseY];
+				int P = Pan.Pieceboard[Pan.CaseX][Pan.CaseY];
+				int I=0;
+				int J=0;
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WQx==25+i*100 && Pan.WQy==725-j*100){
+							I=i;
+							J=j;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WQx=25+Pan.CaseX*100;
+				Pan.WQy=725-Pan.CaseY*100;
+				Pan.WQSelected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=5;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=5;
+				Pan.PieceRefresh();
+				if (Pan.isWhiteKingCheck()){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY]=C;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=P;
+					Pan.Chessboard[I][J]=5;
+					Pan.Pieceboard[I][J]=5;
+					Pan.WQx=25+I*100;
+					Pan.WQy=725-J*100;
+					}
+				else Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+
+			}
+//***King
+		else if (c==1 && Pan.WKgSelected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.WKgx==25+i*100 && Pan.WKgy==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.WKgx=25+Pan.CaseX*100;
+				Pan.WKgy=725-Pan.CaseY*100;
+				Pan.WKgSelected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=6;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=6;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3 && Pan.CaseX==2){
+					Pan.Chessboard[0][0]=0;
+					Pan.Pieceboard[0][0]=0;
+					Pan.Chessboard[3][0]=4;
+					Pan.Pieceboard[3][0]=41;
+					Pan.WR1x=325;
+					}
+				else if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3 && Pan.CaseX==6){
+					Pan.Chessboard[7][0]=0;
+					Pan.Pieceboard[7][0]=0;
+					Pan.Chessboard[5][0]=4;
+					Pan.Pieceboard[5][0]=42;
+					Pan.WR2x=525;
+					}
+				Pan.WKgNeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][4]=0;
+				}
+			}
+		
+
+//***********Play Turn Black Pieces
+//****Black
+//***Pawn
+		if (c==1 && Pan.BP1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP1x==25+i*100 && Pan.BP1y==725-j*100){
+							if (Pan.BP1y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP1x=25+Pan.CaseX*100;
+				Pan.BP1y=725-Pan.CaseY*100;
+				Pan.BP1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=71;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP2x==25+i*100 && Pan.BP2y==725-j*100){
+							if (Pan.BP2y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP2x=25+Pan.CaseX*100;
+				Pan.BP2y=725-Pan.CaseY*100;
+				Pan.BP2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=72;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP3Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP3x==25+i*100 && Pan.BP3y==725-j*100){
+							if (Pan.BP3y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP3x=25+Pan.CaseX*100;
+				Pan.BP3y=725-Pan.CaseY*100;
+				Pan.BP3Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=73;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP4Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP4x==25+i*100 && Pan.BP4y==725-j*100){
+							if (Pan.BP4y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP4x=25+Pan.CaseX*100;
+				Pan.BP4y=725-Pan.CaseY*100;
+				Pan.BP4Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=74;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP5Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP5x==25+i*100 && Pan.BP5y==725-j*100){
+							if (Pan.BP5y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP5x=25+Pan.CaseX*100;
+				Pan.BP5y=725-Pan.CaseY*100;
+				Pan.BP5Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=75;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP6Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP6x==25+i*100 && Pan.BP6y==725-j*100){
+							if (Pan.BP6y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP6x=25+Pan.CaseX*100;
+				Pan.BP6y=725-Pan.CaseY*100;
+				Pan.BP6Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=76;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP7Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP7x==25+i*100 && Pan.BP7y==725-j*100){
+							if (Pan.BP7y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP7x=25+Pan.CaseX*100;
+				Pan.BP7y=725-Pan.CaseY*100;
+				Pan.BP7Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=77;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BP8Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BP8x==25+i*100 && Pan.BP8y==725-j*100){
+							if (Pan.BP8y==125 && Pan.CaseY==4) Pan.Pawnboard[Pan.CaseX][Pan.CaseY]=2;
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BP8x=25+Pan.CaseX*100;
+				Pan.BP8y=725-Pan.CaseY*100;
+				Pan.BP8Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=7;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=78;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==4){
+					Pan.Chessboard[Pan.CaseX][Pan.CaseY+1]=0;
+					Pan.Pieceboard[Pan.CaseX][Pan.CaseY+1]=0;
+					}
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+//***Knight
+		else if (c==1 && Pan.BK1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BK1x==25+i*100 && Pan.BK1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BK1x=25+Pan.CaseX*100;
+				Pan.BK1y=725-Pan.CaseY*100;
+				Pan.BK1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=8;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=81;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BK2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BK2x==25+i*100 && Pan.BK2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BK2x=25+Pan.CaseX*100;
+				Pan.BK2y=725-Pan.CaseY*100;
+				Pan.BK2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=8;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=82;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+//***Rook
+		else if (c==1 && Pan.BR1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BR1x==25+i*100 && Pan.BR1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BR1x=25+Pan.CaseX*100;
+				Pan.BR1y=725-Pan.CaseY*100;
+				Pan.BR1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=10;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=101;
+				Pan.BR1NeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BR2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BR2x==25+i*100 && Pan.BR2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BR2x=25+Pan.CaseX*100;
+				Pan.BR2y=725-Pan.CaseY*100;
+				Pan.BR2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=10;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=102;
+				Pan.BR2NeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+//***Bishop
+		else if (c==1 && Pan.BB1Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BB1x==25+i*100 && Pan.BB1y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BB1x=25+Pan.CaseX*100;
+				Pan.BB1y=725-Pan.CaseY*100;
+				Pan.BB1Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=9;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=91;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+		else if (c==1 && Pan.BB2Selected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BB2x==25+i*100 && Pan.BB2y==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BB2x=25+Pan.CaseX*100;
+				Pan.BB2y=725-Pan.CaseY*100;
+				Pan.BB2Selected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=9;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=92;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+//***Queen
+		else if (c==1 && Pan.BQSelected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BQx==25+i*100 && Pan.BQy==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BQx=25+Pan.CaseX*100;
+				Pan.BQy=725-Pan.CaseY*100;
+				Pan.BQSelected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=11;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=111;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+//***King
+		else if (c==1 && Pan.BKgSelected==1){
+			if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==1 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==2 || Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3){
+				for(int i=0; i<8; i++){
+					for(int j=0; j<8; j++){
+						if (Pan.BKgx==25+i*100 && Pan.BKgy==725-j*100){
+							Pan.Chessboard[i][j]=0;
+							Pan.Pieceboard[i][j]=0;
+							break;
+							}
+						}
+					}
+				Pan.BKgx=25+Pan.CaseX*100;
+				Pan.BKgy=725-Pan.CaseY*100;
+				Pan.BKgSelected=0;
+				Pan.Chessboard[Pan.CaseX][Pan.CaseY]=12;
+				Pan.Pieceboard[Pan.CaseX][Pan.CaseY]=121;
+				if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3 && Pan.CaseX==2){
+					Pan.Chessboard[0][7]=0;
+					Pan.Pieceboard[0][7]=0;
+					Pan.Chessboard[3][7]=10;
+					Pan.Pieceboard[3][7]=101;
+					Pan.BR1x=325;
+					}
+				else if (Pan.Moveboard[Pan.CaseX][Pan.CaseY]==3 && Pan.CaseX==6){
+					Pan.Chessboard[7][7]=0;
+					Pan.Pieceboard[7][7]=0;
+					Pan.Chessboard[5][7]=10;
+					Pan.Pieceboard[5][7]=102;
+					Pan.BR2x=525;
+					}
+				Pan.BKgNeverMoved=1;
+				Pan.Turn+=1;
+				for(int i=0; i<8; i++) Pan.Pawnboard[i][3]=0;
+				}
+			}
+
+
+
+//******Ordi Version 1
+
+	public static void Ordi(int Side){
+		int WhitePiece[] = {11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 31, 32, 41, 42, 5, 6};
+		int BlackPiece[] = {71, 72, 73, 74, 75, 76, 77, 78, 81, 82, 91, 92, 101, 102, 111, 121};
+		int I=0;
+		int J=0;
+		int PieceChoice = (int)(Math.random()*16);
+		if (Side==1) while (PieceAlive(WhitePiece[PieceChoice])==false) PieceChoice = (int)(Math.random()*16);
+		else if (Side==2) while (PieceAlive(BlackPiece[PieceChoice])==false) PieceChoice = (int)(Math.random()*16);
+		for(int i=0; i<16; i++){
+			if (OrdiXY(BlackPiece[i])[0]!=13 && OrdiXY(BlackPiece[i])[1]!=13){
+				int Cxy = Chessboard[OrdiXY(BlackPiece[i])[0]][OrdiXY(BlackPiece[i])[1]];
+				int Wxy = Whiteboard[OrdiXY(BlackPiece[i])[0]][OrdiXY(BlackPiece[i])[1]];
+				int Bxy = Blackboard[OrdiXY(BlackPiece[i])[0]][OrdiXY(BlackPiece[i])[1]];
+				if (Cxy==5){
+					PieceChoice=i;
+					break;
+					}
+				if (0<Cxy && Cxy<7 && Wxy==0){
+					PieceChoice=i;
+					break;
+					}
+				}
+			}
+		for(int i=0; i<8; i++){
+			for(int j=0; j<8; j++){
+				if (Side==1) if (WhitePiece[PieceChoice]==Pieceboard[i][j]){
+					I=i;
+					J=j;
+					break;
+					}
+				if (Side==2) if (BlackPiece[PieceChoice]==Pieceboard[i][j]){
+					I=i;
+					J=j;
+					break;
+					}
+				}
+			}
+		for(int i=0; i<8; i++){
+			for(int j=0; j<8; j++){
+				Moveboard[i][j]=0;
+				}
+			}
+		if (BlackPiece[PieceChoice]==71){
+			if (BP1Promotion==0){
+				MoveBlackPawn(BP1y, I, J);
+				if (OrdiXY(71)[0]!=13 && OrdiXY(71)[1]!=13) PlayBlackPawn(1, OrdiXY(71)[0], OrdiXY(71)[1]);
+				}
+			else if (BP1Promotion==2) {
+				MoveBlackKnight(I, J);
+				if (OrdiXY(71)[0]!=13 && OrdiXY(71)[1]!=13) PlayBlackPawn(1, OrdiXY(71)[0], OrdiXY(71)[1]);
+				}
+			else if (BP1Promotion==3){
+				MoveBlackBishop(I, J);
+				if (OrdiXY(71)[0]!=13 && OrdiXY(71)[1]!=13) PlayBlackPawn(1, OrdiXY(71)[0], OrdiXY(71)[1]);
+				}
+			else if (BP1Promotion==4){
+				MoveBlackRook(I, J);
+				if (OrdiXY(71)[0]!=13 && OrdiXY(71)[1]!=13) PlayBlackPawn(1, OrdiXY(71)[0], OrdiXY(71)[1]);
+				}
+			else if (BP1Promotion==5){
+				MoveBlackQueen(I, J);
+				if (OrdiXY(71)[0]!=13 && OrdiXY(71)[1]!=13) PlayBlackPawn(1, OrdiXY(71)[0], OrdiXY(71)[1]);
+				}
+			}
+		else if (BlackPiece[PieceChoice]==72){
+			MoveBlackPawn(BP2y, I, J);
+			if (OrdiXY(72)[0]!=13 && OrdiXY(72)[1]!=13) PlayBlackPawn(2, OrdiXY(72)[0], OrdiXY(72)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==73){
+			MoveBlackPawn(BP3y, I, J);
+			if (OrdiXY(73)[0]!=13 && OrdiXY(73)[1]!=13) PlayBlackPawn(3, OrdiXY(73)[0], OrdiXY(73)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==74){
+			MoveBlackPawn(BP4y, I, J);
+			if (OrdiXY(74)[0]!=13 && OrdiXY(74)[1]!=13) PlayBlackPawn(4, OrdiXY(74)[0], OrdiXY(74)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==75){
+			MoveBlackPawn(BP5y, I, J);
+			if (OrdiXY(75)[0]!=13 && OrdiXY(75)[1]!=13) PlayBlackPawn(5, OrdiXY(75)[0], OrdiXY(75)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==76){
+			MoveBlackPawn(BP6y, I, J);
+			if (OrdiXY(76)[0]!=13 && OrdiXY(76)[1]!=13) PlayBlackPawn(6, OrdiXY(76)[0], OrdiXY(76)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==77){
+			MoveBlackPawn(BP7y, I, J);
+			if (OrdiXY(77)[0]!=13 && OrdiXY(77)[1]!=13) PlayBlackPawn(7, OrdiXY(77)[0], OrdiXY(77)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==78){
+			MoveBlackPawn(BP8y, I, J);
+			if (OrdiXY(78)[0]!=13 && OrdiXY(78)[1]!=13) PlayBlackPawn(8, OrdiXY(78)[0], OrdiXY(78)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==81){
+			MoveBlackKnight(I, J);
+			if (OrdiXY(81)[0]!=13 && OrdiXY(81)[1]!=13) PlayBlackKnight(1, OrdiXY(81)[0], OrdiXY(81)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==82){
+			MoveBlackKnight(I, J);
+			if (OrdiXY(82)[0]!=13 && OrdiXY(82)[1]!=13) PlayBlackKnight(2, OrdiXY(82)[0], OrdiXY(82)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==91){
+			MoveBlackBishop(I, J);
+			if (OrdiXY(91)[0]!=13 && OrdiXY(91)[1]!=13) PlayBlackBishop(1, OrdiXY(91)[0], OrdiXY(91)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==92){
+			MoveBlackBishop(I, J);
+			if (OrdiXY(92)[0]!=13 && OrdiXY(92)[1]!=13) PlayBlackBishop(2, OrdiXY(92)[0], OrdiXY(92)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==101){
+			MoveBlackRook(I, J);
+			if (OrdiXY(101)[0]!=13 && OrdiXY(101)[1]!=13) PlayBlackRook(1, OrdiXY(101)[0], OrdiXY(101)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==102){
+			MoveBlackRook(I, J);
+			if (OrdiXY(102)[0]!=13 && OrdiXY(102)[1]!=13) PlayBlackRook(2, OrdiXY(102)[0], OrdiXY(102)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==111){
+			MoveBlackQueen(I, J);
+			if (OrdiXY(111)[0]!=13 && OrdiXY(111)[1]!=13) PlayBlackQueen(OrdiXY(111)[0], OrdiXY(111)[1]);
+			}
+		else if (BlackPiece[PieceChoice]==121){
+			MoveBlackKing(I, J);
+			if (OrdiXY(121)[0]!=13 && OrdiXY(121)[1]!=13) PlayBlackKing(OrdiXY(121)[0], OrdiXY(121)[1]);
+			}
+		}
